@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Me preparo para la Prueba Dominguista 1 · IV periodo · Grado 6.°</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF0F4; --paper:#FFFFFF; --ink:#1B2340; --muted:#566074; --rule:#D5DBE4; --soft:#F5F7FA; --field:#FCFDFE; --fieldbd:#C3CAD5;
+  --bar:#1B2340; --bartx:#FFFFFF;
+  --afe:#A3263A; --afe-soft:#F6E7EA;
+  --cog:#24478F; --cog-soft:#E6EDF8;
+  --exp:#2E6A4F; --exp-soft:#E4F1EA;
+  --ochre:#B8800E; --ochre-soft:#FBF0D6;
+  --hb:#CFE0FB; --hb-bd:#1F58C7;   /* azul: qué cambia */
+  --hv:#CDEBD8; --hv-bd:#1E7A45;   /* verde: cómo se organiza */
+  --hr:#F8D3D0; --hr-bd:#C02A1E;   /* rojo: por qué */
+  --ho:#FCDDB8; --ho-bd:#C4610A;   /* naranja: cuándo */
+  --ok:#1D7544; --ok-soft:#DDF2E5; --bad:#B42318; --bad-soft:#FBE3E1;
+  --serif:"Literata", Georgia, "Times New Roman", serif;
+  --sans:"Atkinson Hyperlegible", Verdana, "Segoe UI", system-ui, sans-serif;
+  --fs:17px; --lh:1.6;
+  --phase:var(--cog); --phase-soft:var(--cog-soft);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#12161F; --paper:#1A2030; --ink:#E7EAF1; --muted:#A5AEBF; --rule:#2F3749; --soft:#222A3B; --field:#151B28; --fieldbd:#3A4459;
+    --bar:#0B0F17; --bartx:#E7EAF1;
+    --afe:#E0707F; --afe-soft:#3A1F26; --cog:#7FA3EA; --cog-soft:#1E2A45; --exp:#6DC29A; --exp-soft:#1B3328;
+    --ochre:#E2B24A; --ochre-soft:#3A3020;
+    --hb:#243B66; --hb-bd:#8AB0F5; --hv:#1F4431; --hv-bd:#79D3A3; --hr:#4A2422; --hr-bd:#F28B82; --ho:#4A3219; --ho-bd:#F5B067;
+    --ok:#7AD6A0; --ok-soft:#18382A; --bad:#F28B82; --bad-soft:#3F1F1E;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12161F; --paper:#1A2030; --ink:#E7EAF1; --muted:#A5AEBF; --rule:#2F3749; --soft:#222A3B; --field:#151B28; --fieldbd:#3A4459;
+  --bar:#0B0F17; --bartx:#E7EAF1;
+  --afe:#E0707F; --afe-soft:#3A1F26; --cog:#7FA3EA; --cog-soft:#1E2A45; --exp:#6DC29A; --exp-soft:#1B3328;
+  --ochre:#E2B24A; --ochre-soft:#3A3020;
+  --hb:#243B66; --hb-bd:#8AB0F5; --hv:#1F4431; --hv-bd:#79D3A3; --hr:#4A2422; --hr-bd:#F28B82; --ho:#4A3219; --ho-bd:#F5B067;
+  --ok:#7AD6A0; --ok-soft:#18382A; --bad:#F28B82; --bad-soft:#3F1F1E;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:var(--fs);line-height:var(--lh)}
+body.comoda{--lh:1.95;letter-spacing:.02em;word-spacing:.08em}
+:focus-visible{outline:3px solid #F2B705;outline-offset:2px;border-radius:3px}
+button{font:inherit;color:inherit;cursor:pointer}
+input,textarea,select{font:inherit;color:var(--ink)}
+a{color:var(--cog)}
+img,svg{max-width:100%}
+
+/* barra superior */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;display:flex;align-items:center;gap:10px;padding:10px 20px;background:var(--bar);color:var(--bartx)}
+.topbar .brand{font-weight:700;font-size:15px;line-height:1.2;margin-right:auto}
+.topbar .brand small{display:block;font-weight:400;opacity:.75;font-size:13px}
+.tb-btn{background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:6px;padding:6px 11px;font-size:14px;line-height:1.2;white-space:nowrap}
+.tb-btn:hover{background:rgba(255,255,255,.12)}
+.tb-btn[aria-pressed="true"]{background:#fff;color:#1B2340}
+.tb-btn.primary{background:#F2B705;border-color:#F2B705;color:#1B2340;font-weight:700}
+.menu-btn{display:none}
+
+/* estructura */
+.layout{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1240px;margin:0 auto}
+.ruta{position:sticky;top:calc(58px + env(safe-area-inset-top,0px));height:calc(100vh - 58px);overflow:auto;padding:22px 16px 40px 22px;border-right:1px solid var(--rule)}
+.ruta h2{font-family:var(--serif);font-size:18px;margin:0 0 4px}
+.progress{height:8px;background:var(--rule);border-radius:8px;overflow:hidden;margin:8px 0 4px}
+.progress span{display:block;height:100%;width:0;background:var(--exp);transition:width .4s}
+.progress-t{font-size:13px;color:var(--muted);margin:0 0 14px}
+.ruta ol{list-style:none;margin:0;padding:0}
+.ruta .grp{margin:14px 0 4px;font-size:13px;font-weight:700;color:var(--gc,var(--muted))}
+.ruta a{display:flex;gap:8px;align-items:flex-start;padding:4px 8px;border-radius:6px;color:var(--ink);text-decoration:none;font-size:14px;line-height:1.35}
+.ruta a:hover{background:var(--paper)}
+.ruta a .dot{flex:0 0 20px;height:20px;border-radius:50%;border:2px solid #AEB6C4;font-size:11px;display:grid;place-items:center;color:var(--muted);margin-top:1px}
+.ruta a.done .dot{background:var(--exp);border-color:var(--exp);color:#fff}
+main{padding:0 32px 80px;min-width:0}
+.col{max-width:780px;margin:0 auto}
+
+/* portada */
+.hero{margin:0 -32px;background:var(--bar);color:#fff;overflow:hidden}
+.hero svg{display:block;width:100%;height:auto}
+.hero-t{padding:30px 0 6px}
+.hero-t .kicker{font-size:15px;color:var(--muted);margin:0}
+.hero-t h1{font-family:var(--serif);font-weight:700;font-size:clamp(32px,5vw,50px);line-height:1.06;margin:6px 0 10px;letter-spacing:-.01em}
+.hero-t .lead{font-family:var(--serif);font-size:20px;line-height:1.5;margin:0 0 18px}
+.ident{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:18px 0 8px}
+.ident label{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:3px}
+.ident input{border:1px solid var(--rule);border-radius:6px;padding:8px 10px;background:var(--paper)}
+.aviso{font-size:15px;background:var(--ochre-soft);border-left:4px solid var(--ochre);padding:10px 14px;border-radius:0 6px 6px 0;margin:14px 0}
+.aviso.ok{background:var(--exp-soft);border-color:var(--exp)}
+
+/* fases */
+.phase{margin:64px 0 8px;padding:26px 0 18px;border-top:6px solid var(--phase)}
+.phase h2{font-family:var(--serif);font-size:34px;line-height:1.1;margin:0;color:var(--phase)}
+.phase p{margin:6px 0 0;color:var(--muted)}
+.ph-afe{--phase:var(--afe);--phase-soft:var(--afe-soft)}
+.ph-cog{--phase:var(--cog);--phase-soft:var(--cog-soft)}
+.ph-exp{--phase:var(--exp);--phase-soft:var(--exp-soft)}
+.momento{font-family:var(--serif);font-size:24px;margin:48px 0 4px;color:var(--phase)}
+.momento + p{margin-top:0;color:var(--muted)}
+h3,h4{font-family:var(--serif);line-height:1.25}
+.block{background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:22px 26px;margin:18px 0}
+.table-wrap{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:15.5px}
+th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:700}
+.proposito{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.proposito:last-child{border-bottom:0}
+.proposito b{font-family:var(--serif);font-size:18px}
+
+/* actividades */
+.act{position:relative;background:var(--paper);border:1px solid var(--rule);border-left:5px solid var(--phase);border-radius:3px;padding:22px 26px 24px;margin:22px 0;scroll-margin-top:72px}
+.act-h{display:flex;gap:14px;align-items:flex-start;margin-bottom:10px}
+.act-n{flex:0 0 42px;height:42px;border-radius:50%;background:var(--phase);color:#fff;display:grid;place-items:center;font-weight:700;font-size:18px}
+.act-h h3{margin:2px 0 0;font-size:22px}
+.act-mode{margin:2px 0 0;color:var(--muted);font-size:14.5px}
+.q{margin:18px 0 6px}
+.q-t{margin:0 0 6px;font-weight:700}
+.q-t .lt{color:var(--phase)}
+textarea,input[type=text]{width:100%;border:1px solid var(--fieldbd);border-radius:6px;padding:9px 11px;background:var(--field);resize:vertical;line-height:1.5}
+textarea{min-height:80px}
+textarea:focus,input[type=text]:focus,select:focus{border-color:var(--phase);outline:2px solid var(--phase-soft)}
+select{border:1px solid var(--fieldbd);border-radius:6px;padding:7px 8px;background:var(--field);max-width:100%}
+td textarea{min-height:70px}
+.frame{font-size:14.5px;color:var(--muted);margin:2px 0 6px}
+.frame b{color:var(--phase)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}
+.btn{border:0;border-radius:6px;padding:9px 16px;background:var(--phase);color:#fff;font-weight:700;font-size:15px}
+:root[data-theme="dark"] .btn{color:#10141C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#10141C}}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--phase);border:1.5px solid var(--phase)}
+.feedback{font-size:15px;padding:8px 12px;border-radius:6px;display:none}
+.feedback.show{display:block}
+.feedback.ok{background:var(--ok-soft);color:var(--ok)}
+.feedback.mid{background:var(--ochre-soft);color:var(--ink)}
+.feedback.bad{background:var(--bad-soft);color:var(--bad)}
+.is-ok{border-color:var(--ok)!important;background:var(--ok-soft)!important}
+.is-bad{border-color:var(--bad)!important;background:var(--bad-soft)!important}
+details.pista{margin:6px 0 0;font-size:15px}
+details.pista summary{cursor:pointer;color:var(--phase);font-weight:700;width:max-content;max-width:100%}
+details.pista div{background:var(--soft);border-radius:6px;padding:8px 12px;margin-top:6px}
+.situacion{background:var(--phase-soft);border-radius:4px;padding:16px 20px;font-family:var(--serif);font-size:18px;line-height:1.65}
+
+/* tarjetas de memoria */
+.flash{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:14px 0}
+.fc{position:relative;min-height:150px;border:1.5px solid var(--rule);border-radius:8px;background:var(--paper);padding:14px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;gap:8px}
+.fc .term{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--cog)}
+.fc .hint{font-size:13px;color:var(--muted)}
+.fc .def{display:none;font-size:15px;line-height:1.45}
+.fc .ej{display:none;font-size:13.5px;color:var(--muted);border-top:1px dashed var(--rule);padding-top:6px}
+.fc[aria-pressed="true"]{background:var(--cog-soft);border-color:var(--cog)}
+.fc[aria-pressed="true"] .def,.fc[aria-pressed="true"] .ej{display:block}
+.fc[aria-pressed="true"] .hint{display:none}
+.fc[aria-pressed="true"] .term{font-size:17px}
+.fc-rate{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+
+/* lectura y subrayado */
+.doc{background:var(--paper);border:1px solid var(--rule);border-radius:3px;margin:30px 0}
+.doc-h{padding:24px 30px 6px}
+.doc-h .num{font-size:14px;color:var(--muted);margin:0}
+.doc-h h3{font-size:28px;margin:2px 0 0}
+.tools{position:sticky;top:calc(58px + env(safe-area-inset-top,0px));z-index:20;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 30px;background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);font-size:14px}
+.tools .lbl{color:var(--muted);margin-right:2px}
+.hl-btn{border:2px solid transparent;border-radius:20px;padding:4px 12px;font-size:14px;color:var(--ink)}
+.hl-btn[data-mode=b]{background:var(--hb)}
+.hl-btn[data-mode=v]{background:var(--hv)}
+.hl-btn[data-mode=r]{background:var(--hr)}
+.hl-btn[data-mode=o]{background:var(--ho)}
+.hl-btn[data-mode=x]{background:var(--soft);color:var(--muted)}
+.hl-btn[aria-pressed=true]{border-color:currentColor;font-weight:700}
+.speak{margin-left:auto;border:1px solid var(--rule);background:var(--soft);border-radius:20px;padding:4px 12px;font-size:14px}
+.doc-body{padding:18px 30px 22px;font-family:var(--serif);font-size:calc(var(--fs) + 2px);line-height:calc(var(--lh) + .15)}
+.doc-body p{position:relative;margin:0 0 1.05em;padding-left:38px}
+.doc-body p .pn{position:absolute;left:0;top:.1em;font-family:var(--sans);font-size:14px;font-weight:700;color:var(--phase)}
+.doc-foot{padding:0 30px 20px;font-size:13px;color:var(--muted)}
+.s{cursor:pointer;border-radius:3px;padding:1px 1px;transition:background .15s}
+.s:hover{background:var(--soft)}
+.s.c-b{background:var(--hb);box-shadow:inset 0 -2px var(--hb-bd)}
+.s.c-v{background:var(--hv);box-shadow:inset 0 -2px var(--hv-bd)}
+.s.c-r{background:var(--hr);box-shadow:inset 0 -2px var(--hr-bd)}
+.s.c-o{background:var(--ho);box-shadow:inset 0 -2px var(--ho-bd)}
+.s.miss{outline:2px dashed var(--muted);outline-offset:1px}
+.leyenda{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;color:var(--muted);padding:0 30px 14px}
+.leyenda span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--c);border:1.5px solid var(--cb)}
+
+/* ordenar */
+.orden{display:grid;gap:8px;margin:12px 0}
+.orden .row{display:grid;grid-template-columns:86px 1fr;gap:10px;align-items:center;border:1px solid var(--rule);border-radius:6px;padding:8px 10px;background:var(--paper)}
+.orden .row.two{grid-template-columns:86px 1fr 190px}
+.orden .row span{font-size:15.5px}
+
+/* clasificar */
+.classify{display:grid;gap:8px;margin:12px 0}
+.classify .row{display:grid;grid-template-columns:1fr 210px;gap:12px;align-items:center;border-bottom:1px solid var(--rule);padding:8px 0}
+.classify .row span{font-size:15.5px}
+.classify.wide .row{grid-template-columns:1fr 1fr}
+.classify.wide select{width:100%;white-space:normal}
+
+/* opción múltiple */
+.mcq{border-top:1px solid var(--rule);padding:14px 0}
+.mcq:first-child{border-top:0}
+.mcq fieldset{border:0;margin:0;padding:0}
+.mcq legend{font-weight:700;margin-bottom:6px;padding:0}
+.mcq label{display:flex;gap:10px;align-items:flex-start;padding:6px 10px;border-radius:6px;border:1px solid transparent}
+.mcq label:hover{background:var(--soft)}
+.mcq input{margin-top:5px;accent-color:var(--phase)}
+.mcq .exp{font-size:14.5px;margin:6px 10px 0}
+
+/* mentefacto */
+.mf{margin:16px 0;font-size:15px}
+.mf-grid{display:grid;grid-template-columns:1.35fr .8fr 1.15fr;grid-template-areas:". sup ." "iso nuc exc" ". inf .";gap:14px 22px;align-items:center}
+.mf-box{border:2.5px solid var(--phase);background:var(--phase-soft);border-radius:6px;padding:10px;text-align:center;display:flex;flex-direction:column;gap:6px}
+.mf-box small{font-size:12px;font-weight:700;color:var(--muted)}
+.mf-nuc{grid-area:nuc;background:var(--bar);color:#fff;border-color:var(--bar);font-family:var(--serif);font-size:22px;font-weight:700;min-height:90px;justify-content:center}
+.mf-sup{grid-area:sup}.mf-iso{grid-area:iso}.mf-exc{grid-area:exc}.mf-inf{grid-area:inf}
+.mf-exc{border-style:dashed;border-color:var(--afe);background:var(--afe-soft)}
+.mf select{width:100%;font-size:14px}
+.mf-leg{font-size:13.5px;color:var(--muted);margin-top:10px}
+
+/* cadena causal modelo */
+.cadena{display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr;align-items:stretch;margin:14px 0}
+.cadena div.c{border-radius:6px;padding:10px 12px;font-size:15px}
+.cadena .ca{background:var(--hr);border:1.5px solid var(--hr-bd)}
+.cadena .he{background:var(--soft);border:1.5px solid var(--muted)}
+.cadena .co{background:var(--hv);border:1.5px solid var(--hv-bd)}
+.cadena .c b{display:block;font-size:13px;margin-bottom:2px}
+.cadena .ar{display:grid;place-items:center;font-size:22px;color:var(--muted)}
+.conectores{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.conectores div{border:1px solid var(--rule);border-radius:6px;padding:10px 12px;background:var(--soft);font-size:15px}
+
+/* autoevaluación */
+.semaforo{display:grid;gap:10px}
+.sem-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--rule);padding:8px 0}
+.seg{display:inline-flex;border:1.5px solid var(--rule);border-radius:6px;overflow:hidden}
+.seg button{border:0;background:var(--paper);padding:6px 12px;font-size:14px;border-right:1px solid var(--rule)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed=true][data-v="1"]{background:var(--bad-soft);color:var(--bad);font-weight:700}
+.seg button[aria-pressed=true][data-v="2"]{background:var(--ochre-soft);font-weight:700}
+.seg button[aria-pressed=true][data-v="3"]{background:var(--ok-soft);color:var(--ok);font-weight:700}
+.check label{display:flex;gap:10px;align-items:flex-start;padding:5px 0}
+.check input{margin-top:6px;accent-color:var(--exp);width:18px;height:18px}
+.tips{columns:2;column-gap:28px}
+.tips p{break-inside:avoid;margin:0 0 12px}
+.final{background:var(--bar);color:#fff;border-radius:6px;padding:22px 26px;margin:30px 0}
+.final h3{margin:0 0 6px;font-size:24px}
+.final .btn{background:#F2B705;color:#1B2340}
+.final .btn.ghost{background:transparent;color:#fff;border-color:#fff}
+#resumen{display:none;width:100%;min-height:260px;margin-top:12px;font-family:ui-monospace,Consolas,monospace;font-size:13px;background:#fff;color:#1B2340}
+.docente{margin:40px 0 0;font-size:15px}
+.docente summary{cursor:pointer;font-weight:700;color:var(--muted)}
+
+@media (max-width:960px){
+  .layout{grid-template-columns:1fr}
+  .ruta{display:none;position:fixed;inset:58px 0 0 0;z-index:35;background:var(--bg);height:auto}
+  .ruta.open{display:block}
+  .menu-btn{display:inline-block}
+}
+@media (max-width:640px){
+  main{padding:0 14px 60px}.hero{margin:0 -14px}
+  .act,.block{padding:18px 16px}
+  .doc-h,.doc-body,.tools,.leyenda,.doc-foot{padding-left:16px;padding-right:16px}
+  .ident{grid-template-columns:1fr}
+  .tb-hide{display:none}
+  .topbar{padding:8px 12px;gap:6px}.topbar .brand small{display:none}.topbar .brand{font-size:14px}
+  #comoda .l{display:none}#verTop .l{display:none}
+  .cadena{grid-template-columns:1fr}.cadena .ar{transform:rotate(90deg);height:28px}
+  .conectores,.tips{grid-template-columns:1fr;columns:1}
+  .mf-grid{grid-template-columns:1fr;grid-template-areas:"sup" "nuc" "iso" "exc" "inf"}
+  .classify .row,.orden .row.two{grid-template-columns:1fr}
+  .orden .row.two{grid-template-columns:86px 1fr}.orden .row.two select:last-child{grid-column:1/-1}
+  .proposito{grid-template-columns:1fr;gap:2px}
+  .sem-row{grid-template-columns:1fr}
+}
+@media print{
+  .topbar,.ruta,.tools,.actions,.final,details.pista,.speak{display:none!important}
+  .layout{display:block}body{background:#fff}
+  .act,.block,.doc{break-inside:avoid;border-color:#999}
+  textarea{border:1px solid #999;min-height:90px}
+}
+/* ---- escenas ilustradas ---- */
+.scene{position:relative;margin:14px 0;border-radius:6px;overflow:hidden;border:1px solid var(--rule);background:#CFE3F2}
+.scene svg{display:block;width:100%;height:auto}
+.hot{position:absolute;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;border:3px solid #fff;background:#1B2340;color:#fff;font-weight:700;font-size:16px;box-shadow:0 2px 8px rgba(0,0,0,.35);display:grid;place-items:center;padding:0}
+.hot:hover,.hot.sel{background:#F2B705;color:#1B2340}
+.hot.done{background:var(--ok);border-color:#fff}
+.hot.wrong{animation:shake .4s}
+@keyframes shake{25%{transform:translate(-58%,-50%)}75%{transform:translate(-42%,-50%)}}
+.hot-rows .row{display:grid;grid-template-columns:44px 1fr 310px;gap:10px;align-items:center;border-bottom:1px solid var(--rule);padding:8px 0}
+.hot-rows .row .lt{width:32px;height:32px;border-radius:50%;background:var(--bar);color:#fff;display:grid;place-items:center;font-weight:700}
+.hot-rows .row.pulse{animation:pulse 1.2s ease}
+@keyframes pulse{0%{background:#FFF1B8}100%{background:transparent}}
+.find-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--phase-soft);border-radius:6px;padding:10px 14px;font-size:16px}
+.find-bar b{font-family:var(--serif);font-size:19px;color:var(--phase)}
+.find-list{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}
+.find-list span{font-size:13.5px;padding:3px 10px;border-radius:20px;background:var(--soft);color:var(--muted)}
+.find-list span.ok{background:var(--ok-soft);color:var(--ok);font-weight:700}
+
+/* ---- solo o en grupo ---- */
+.sg{display:grid;gap:8px;margin:12px 0}
+.sg-item{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1px solid var(--rule);border-radius:6px;padding:8px 12px;background:var(--paper)}
+.sg-item .feedback{grid-column:1/-1;margin:0}
+
+/* ---- memoria ---- */
+.mem{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}
+.mem button{aspect-ratio:4/3;border-radius:8px;border:2px solid var(--cog);background:var(--cog);color:#fff;font-size:14.5px;line-height:1.3;padding:8px;display:grid;place-items:center;text-align:center}
+.mem button .f{display:none}
+.mem button::before{content:"?";font-family:var(--serif);font-size:30px;font-weight:700;opacity:.7}
+.mem button.up,.mem button.ok{background:var(--paper);color:var(--ink)}
+.mem button.up::before,.mem button.ok::before{content:none}
+.mem button.up .f,.mem button.ok .f{display:block}
+.mem button.ok{border-color:var(--ok);background:var(--ok-soft)}
+.mem button.term .f{font-family:var(--serif);font-weight:700;font-size:17px;color:var(--cog)}
+.mem-stats{font-size:14px;color:var(--muted)}
+
+/* ---- población ---- */
+.pob{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:18px;align-items:start}
+.pob svg{width:100%;height:auto;border-radius:6px;border:1px solid var(--rule)}
+.pob input[type=range]{width:100%;accent-color:var(--phase)}
+.pob .n{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--phase);margin:0}
+.prob{border:1px solid var(--rule);border-left:4px solid var(--afe);border-radius:6px;padding:10px 12px;margin:8px 0;background:var(--paper)}
+.prob p{margin:0 0 6px;font-weight:700;font-size:15.5px}
+.prob select{width:100%}
+.prob[hidden]{display:none}
+
+/* ---- causal con listas ---- */
+.causal .row{display:grid;grid-template-columns:180px 1fr 1fr;gap:10px;align-items:center;border-bottom:1px solid var(--rule);padding:10px 0}
+.causal .hd{font-size:13px;font-weight:700;color:var(--muted);border-bottom:2px solid var(--rule)}
+.causal select{width:100%}
+
+/* ---- V/F ---- */
+.vf{display:grid;gap:10px}
+.vf-item{border:1px solid var(--rule);border-radius:6px;padding:10px 12px;background:var(--paper)}
+.vf-row{display:flex;gap:10px;align-items:center;justify-content:space-between}
+.seg.vfb button{min-width:44px;font-weight:700}
+.seg.vfb button[aria-pressed=true]{background:var(--phase);color:#fff}
+.vf-item input{margin-top:8px;display:none}
+.vf-item.needs input{display:block}
+
+/* ---- línea del tiempo ---- */
+.tl{list-style:none;margin:12px 0;padding:0;display:grid;gap:8px}
+.tl li{display:grid;grid-template-columns:40px 1fr auto;gap:10px;align-items:center;border:1px solid var(--rule);border-radius:6px;padding:8px 10px;background:var(--paper)}
+.tl li .n{width:30px;height:30px;border-radius:50%;background:var(--phase);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.tl li .mv{display:flex;gap:4px}
+.tl li .mv button{border:1px solid var(--rule);background:var(--soft);border-radius:6px;width:36px;height:32px}
+.tl li .dt{display:none;font-size:13px;font-weight:700;color:var(--ok)}
+.tl.checked li .dt{display:block}
+.tl li.is-ok{border-color:var(--ok);background:var(--ok-soft)}
+.tl li.is-bad{border-color:var(--bad);background:var(--bad-soft)}
+
+/* ---- ilustraciones de lectura ---- */
+.doc-art{display:block;width:100%;height:auto;border-bottom:1px solid var(--rule)}
+.reto-score{font-family:var(--serif);font-size:42px;font-weight:700;color:var(--phase);margin:0}
+
+@media (max-width:640px){
+  .hot{width:30px;height:30px;font-size:14px}
+  .hot-rows .row{grid-template-columns:36px 1fr}.hot-rows .row select{grid-column:1/-1}
+  .mem{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .mem button{font-size:12.5px;aspect-ratio:1}
+  .pob{grid-template-columns:1fr}
+  .causal .row{grid-template-columns:1fr}.causal .hd{display:none}
+  .sg-item{grid-template-columns:1fr}
+}
+
+mark.u{background:var(--ochre-soft);box-shadow:inset 0 -2px var(--ochre);color:inherit;padding:0 2px;border-radius:2px}
+
+.po{display:grid;gap:12px;margin:12px 0}
+.po-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--rule);padding:8px 0}
+.po-boxes{display:flex;gap:4px;flex-wrap:wrap}
+.po-boxes input{width:34px;height:40px;text-align:center;text-transform:uppercase;font-weight:700;font-size:18px;border:1.5px solid var(--fieldbd);border-radius:6px;background:var(--field);padding:0}
+.po-boxes input.is-ok{border-color:var(--ok)}
+.mapa-rows .row{display:grid;grid-template-columns:44px 1fr 1fr;gap:10px;align-items:center;border-bottom:1px solid var(--rule);padding:8px 0}
+.mapa-rows .row .lt{width:32px;height:32px;border-radius:50%;background:var(--bar);color:#fff;display:grid;place-items:center;font-weight:700}
+.mapa-rows select{width:100%}
+.comic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}
+.comic figure{margin:0;border:3px solid var(--ink);border-radius:6px;overflow:hidden;position:relative;background:#fff}
+.comic svg{display:block;width:100%;height:auto}
+.comic figcaption{position:absolute;top:4px;left:6px;background:var(--ink);color:var(--paper);width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700}
+@media (max-width:640px){.comic{grid-template-columns:1fr 1fr}.po-row{grid-template-columns:1fr}.mapa-rows .row{grid-template-columns:36px 1fr}.mapa-rows .row select:last-child{grid-column:2}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="per" viewBox="0 0 40 84"><path d="M9 82 L12 42 Q20 30 28 42 L31 82Z"/><circle cx="20" cy="15" r="10" fill="#C68B59"/><path d="M10 13 Q20 0 30 13 Q26 7 20 7 Q14 7 10 13Z" fill="#3B2A1E"/></symbol>
+    <symbol id="nino" viewBox="0 0 40 84"><path d="M11 82 L13 48 Q20 38 27 48 L29 82Z"/><circle cx="20" cy="26" r="11" fill="#C68B59"/><path d="M9 24 Q20 10 31 24 Q26 17 20 17 Q14 17 9 24Z" fill="#3B2A1E"/></symbol>
+  </defs>
+</svg>
+<header class="topbar">
+  <button class="tb-btn menu-btn" id="menuBtn" aria-controls="ruta" aria-expanded="false">Ruta</button>
+  <div class="brand">Me preparo para la prueba<small>Colegio Santo Domingo Bilingüe · Ciencias Sociales 6.°</small></div>
+  <button class="tb-btn tb-hide" id="fsDown" aria-label="Reducir tamaño de letra">A−</button>
+  <button class="tb-btn tb-hide" id="fsUp" aria-label="Aumentar tamaño de letra">A+</button>
+  <button class="tb-btn" id="comoda" aria-pressed="false"><span class="l">Lectura </span>cómoda</button>
+  <button class="tb-btn primary" id="verTop"><span class="l">Mis </span>respuestas</button>
+</header>
+<div class="layout">
+<nav class="ruta" id="ruta" aria-label="Ruta de la guía">
+  <h2>Ruta de la guía</h2>
+  <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+  <p class="progress-t" id="barT"></p>
+  <ol id="navList"></ol>
+</nav>
+<main>
+<div class="hero" aria-hidden="true">
+<svg viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="300" fill="#1B2340"/>
+  <path d="M0 250 C 200 230 380 270 600 248 S 1000 226 1200 244 L1200 300 L0 300Z" fill="#24478F" opacity=".55"/>
+  <path d="M0 268 C 240 256 420 286 640 266 S 1020 252 1200 262" stroke="#9CC2F0" stroke-width="3" fill="none" opacity=".7"/>
+  <g fill="none" stroke="#F2B705" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M110 232 l14 -26 l14 26z"/><path d="M124 206 c-6 -12 6 -18 0 -30"/>
+    <circle cx="80" cy="200" r="8"/><path d="M80 208 v24 M70 220 h20"/><circle cx="168" cy="200" r="8"/><path d="M168 208 v24 M158 220 h20"/>
+    <path d="M300 236 v-44 M290 204 l10 -8 l10 8 M290 216 l10 -8 l10 8 M330 236 v-38 M320 210 l10 -8 l10 8"/>
+    <path d="M440 236 v-30 l26 -20 l26 20 v30z M458 236 v-14 h16 v14"/><path d="M510 236 v-24 l20 -16 l20 16 v24z"/>
+    <path d="M640 236 c-18 0 -22 -30 -8 -40 v-8 h16 v8 c14 10 10 40 -8 40z"/>
+    <path d="M760 236 v-60 h30 v60 M790 236 v-40 h26 v40 M816 236 v-72 h22 v72 M740 236 h120"/>
+    <path d="M950 236 h140 v-18 h-20 v-18 h-20 v-18 h-20 v-16 h-20 v16 h-20 v18 h-20 v18 h-20z"/>
+    <path d="M1110 236 v-50 M1130 236 v-50 M1150 236 v-50 M1170 236 v-50 M1100 186 h80 l-40 -22z"/>
+  </g>
+</svg>
+</div>
+<div class="col">
+<section class="hero-t" id="inicio" data-nav="Inicio" data-group="Presentación">
+  <p class="kicker">Guía de estudio · Prueba Dominguista 1 · Cuarto periodo · Grado 6.°</p>
+  <h1>De pequeños grupos a grandes civilizaciones</h1>
+  <p class="lead">Observa, juega, lee y explica. Aquí no están las respuestas de la prueba: aquí entrenas para encontrarlas tú.</p>
+  <div class="ident">
+    <label>Nombre completo<input type="text" id="nombre" autocomplete="name"></label>
+    <label>Curso<input type="text" id="curso" placeholder="6.° __"></label>
+    <label>Fecha<input type="text" id="fecha"></label>
+  </div>
+</section>
+
+<!-- ============ AFECTIVA ============ -->
+<div class="phase ph-afe" id="fase-afectiva"><h2>Fase afectiva</h2><p>¿Qué tiene que ver esto contigo?</p></div>
+
+<section class="act ph-afe" id="act-1" data-nav="¿Solo o en grupo?" data-group="Fase afectiva">
+  <header class="act-h"><span class="act-n">1</span><div><h3>¿Solo o en grupo?</h3><p class="act-mode">Decide · Individual</p></div></header>
+  <p>Hace doce mil años, ¿podrías hacer esto por tu cuenta?</p>
+  <div class="sg" id="sg"></div>
+</section>
+
+<section class="act ph-afe" id="act-2" data-nav="Observo el campamento" data-group="Fase afectiva">
+  <header class="act-h"><span class="act-n">2</span><div><h3>Observo el campamento</h3><p class="act-mode">Lectura de imagen · Individual</p></div></header>
+  <p>Toca cada letra y elige qué ventaja de vivir en comunidad muestra esa parte de la escena.</p>
+  <div class="scene" data-scene="s1">
+  <svg viewBox="0 0 800 420" role="img" aria-label="Campamento prehistórico: una tienda de pieles, una fogata con personas alrededor, un adulto con dos niños, un vigía sobre una roca y dos cazadores con lanzas persiguiendo un ciervo.">
+    <rect width="800" height="420" fill="#CFE3F2"/>
+    <circle cx="690" cy="70" r="34" fill="#F7D774"/>
+    <path d="M0 250 L120 150 L230 230 L340 120 L470 240 L600 140 L720 220 L800 170 L800 300 L0 300Z" fill="#8FA6B8"/>
+    <path d="M300 150 L340 120 L380 155 L360 150 L340 160 L320 150Z" fill="#fff"/>
+    <rect y="290" width="800" height="130" fill="#CDB27A"/>
+    <path d="M0 300 Q200 285 400 300 T800 296 L800 310 L0 310Z" fill="#B99A5E"/>
+    <!-- tienda -->
+    <path d="M160 175 L80 335 L240 335Z" fill="#9C6B3C"/><path d="M160 175 L130 335 L190 335Z" fill="#7A5230"/><path d="M160 260 L140 335 L180 335Z" fill="#3B2A1E"/>
+    <path d="M150 170 L160 150 M170 170 L160 150 M160 175 L165 145" stroke="#5A3A20" stroke-width="4"/>
+    <!-- adulto con niños -->
+    <use href="#per" x="245" y="250" width="44" height="92" fill="#6B8E4E"/>
+    <use href="#nino" x="285" y="285" width="30" height="62" fill="#D98C3A"/>
+    <use href="#nino" x="310" y="290" width="28" height="58" fill="#B0527A"/>
+    <!-- fogata -->
+    <path d="M370 345 L430 330 M372 330 L430 346" stroke="#5A3A20" stroke-width="9" stroke-linecap="round"/>
+    <path d="M400 335 C380 315 392 300 398 285 C405 300 425 312 404 335Z" fill="#F08A24"/><path d="M400 335 C392 322 398 312 401 305 C405 314 412 322 403 335Z" fill="#F7D774"/>
+    <use href="#per" x="345" y="262" width="36" height="76" fill="#8C4A3A"/>
+    <use href="#per" x="425" y="262" width="36" height="76" fill="#3F6D8F"/>
+    <!-- vigía -->
+    <path d="M520 290 Q560 200 620 230 Q640 260 630 290Z" fill="#7C8792"/>
+    <use href="#per" x="555" y="140" width="40" height="84" fill="#5E4B8B"/>
+    <path d="M600 160 l30 -8" stroke="#3B2A1E" stroke-width="4" stroke-linecap="round"/>
+    <!-- cazadores y ciervo -->
+    <use href="#per" x="640" y="262" width="40" height="84" fill="#A04646"/>
+    <use href="#per" x="690" y="266" width="38" height="80" fill="#4F7A5A"/>
+    <path d="M652 300 L612 250 M700 302 L668 252" stroke="#5A3A20" stroke-width="4" stroke-linecap="round"/>
+    <path d="M612 250 l-6 -12 l12 6z M668 252 l-6 -12 l12 6z" fill="#555"/>
+    <g fill="#8A5A2B"><ellipse cx="760" cy="315" rx="30" ry="14"/><path d="M782 308 l12 -18 l6 4 l-10 18z"/><path d="M740 322 v20 M750 324 v20 M772 324 v20 M782 322 v20" stroke="#8A5A2B" stroke-width="5"/></g>
+    <path d="M794 290 l-6 -14 M796 290 l4 -14" stroke="#5A3A20" stroke-width="3"/>
+  </svg>
+  <button class="hot" style="left:50%;top:73%" data-row="s1A">A</button>
+  <button class="hot" style="left:20%;top:62%" data-row="s1B">B</button>
+  <button class="hot" style="left:83.5%;top:59%" data-row="s1C">C</button>
+  <button class="hot" style="left:71%;top:31%" data-row="s1D">D</button>
+  <button class="hot" style="left:34%;top:62%" data-row="s1E">E</button>
+  </div>
+  <div class="hot-rows" data-hotrows="s1"></div>
+  <div class="actions"><button class="btn" data-check="#act-2 .hot-rows">Comprobar</button><div class="feedback" role="status"></div></div>
+  <div class="q"><p class="q-t"><span class="lt">a)</span> ¿Cuál de esas ventajas te parece la más importante para sobrevivir? ¿Por qué?</p><textarea data-q></textarea></div>
+</section>
+
+<!-- ============ COGNITIVA ============ -->
+<div class="phase ph-cog" id="fase-cognitiva"><h2>Fase cognitiva</h2><p>Las herramientas para pensar: nociones, conceptos y causas.</p></div>
+
+<section class="act ph-cog" id="act-3" data-nav="Tarjetas de memoria" data-group="Fase cognitiva">
+  <header class="act-h"><span class="act-n">3</span><div><h3>Tarjetas de memoria</h3><p class="act-mode">Recuerda antes de voltear</p></div></header>
+  <p>Di el significado en voz alta, voltea y marca si lo sabías.</p>
+  <div class="flash" id="flash"></div>
+  <p class="progress-t" id="flashT"></p>
+</section>
+
+<section class="act ph-cog" id="act-4" data-nav="Juego de parejas" data-group="Fase cognitiva">
+  <header class="act-h"><span class="act-n">4</span><div><h3>Juego de parejas</h3><p class="act-mode">Memoria · Individual o en parejas</p></div></header>
+  <p>Voltea dos cartas. Si el concepto y su significado coinciden, se quedan arriba.</p>
+  <div class="mem" id="mem"></div>
+  <div class="actions" style="margin-top:0"><button class="btn ghost" id="memReset">Barajar de nuevo</button><span class="mem-stats" id="memStats"></span></div>
+</section>
+
+<section class="act ph-cog" id="act-po" data-nav="Palabra oculta" data-group="Fase cognitiva">
+  <header class="act-h"><span class="act-n">5</span><div><h3>Palabra oculta</h3><p class="act-mode">Lee la pista y escribe la palabra</p></div></header>
+  <div class="po" id="po"></div>
+  <div class="actions"><button class="btn" id="poCheck">Comprobar</button><div class="feedback" role="status"></div></div>
+</section>
+
+<section class="act ph-cog" id="act-5" data-nav="Causa y consecuencia" data-group="Fase cognitiva">
+  <header class="act-h"><span class="act-n">6</span><div><h3>Causa, hecho y consecuencia</h3><p class="act-mode">Proposición causal</p></div></header>
+  <div class="cadena">
+    <div class="c ca"><b>Causa · ¿por qué?</b>Llovió muchos días en la montaña.</div>
+    <div class="ar">→</div>
+    <div class="c he"><b>Hecho · ¿qué pasó?</b>El río se desbordó.</div>
+    <div class="ar">→</div>
+    <div class="c co"><b>Consecuencia · ¿qué produjo?</b>Los cultivos se inundaron.</div>
+  </div>
+  <div class="conectores">
+    <div><b style="color:var(--hr-bd)">Anuncian causa</b><br>porque · debido a · ya que · gracias a · como</div>
+    <div><b style="color:var(--hv-bd)">Anuncian consecuencia</b><br>por eso · por lo tanto · así que · entonces</div>
+  </div>
+  <p style="margin-top:16px"><b>¿Causa o consecuencia?</b> Clasifica la parte resaltada.</p>
+  <div class="classify" data-classify="cc"></div>
+  <div class="actions"><button class="btn" data-check="#act-5 .classify">Comprobar</button><div class="feedback" role="status"></div></div>
+</section>
+
+<section class="act ph-cog" id="act-6" data-nav="Mentefacto: civilización" data-group="Fase cognitiva">
+  <header class="act-h"><span class="act-n">7</span><div><h3>Mentefacto de «civilización»</h3><p class="act-mode">Completa y comprueba</p></div></header>
+  <div class="mf" data-mf>
+    <div class="mf-grid">
+      <div class="mf-box mf-sup"><small>Supraordinada · ¿qué es?</small>
+        <select data-q data-label="Mentefacto · supraordinada" data-answer="a"><option value="">Elegir…</option><option value="b">Un grupo de cazadores</option><option value="a">Una organización social compleja</option><option value="c">Un río con tierras fértiles</option></select></div>
+      <div class="mf-box mf-nuc">Civilización</div>
+      <div class="mf-box mf-iso"><small>Isoordinadas · ¿qué tiene?</small>
+        <select data-q data-label="Mentefacto · isoordinada 1" data-answer="a"><option value="">Elegir…</option><option value="a">Ciudades</option><option value="x">Vida en movimiento</option></select>
+        <select data-q data-label="Mentefacto · isoordinada 2" data-answer="a"><option value="">Elegir…</option><option value="x">Todos hacen lo mismo</option><option value="a">Oficios y jerarquía</option></select>
+        <select data-q data-label="Mentefacto · isoordinada 3" data-answer="a"><option value="">Elegir…</option><option value="a">Gobierno, leyes y escritura</option><option value="x">Ninguna norma</option></select>
+        <select data-q data-label="Mentefacto · isoordinada 4" data-answer="a"><option value="">Elegir…</option><option value="x">Solo lo del día</option><option value="a">Comercio y excedentes</option></select>
+      </div>
+      <div class="mf-box mf-exc"><small>Exclusión · no es…</small>
+        <select data-q data-label="Mentefacto · exclusión" data-answer="a"><option value="">Elegir…</option><option value="a">Una banda nómada</option><option value="b">Una ciudad con templos</option><option value="c">Un reino con leyes</option></select></div>
+      <div class="mf-box mf-inf"><small>Infraordinadas · tipos</small>
+        <select data-q data-label="Mentefacto · infraordinada 1" data-answer="a"><option value="">Elegir…</option><option value="a">Fluviales: Egipto, Mesopotamia…</option><option value="x">Campamentos de caza</option></select>
+        <select data-q data-label="Mentefacto · infraordinada 2" data-answer="a"><option value="">Elegir…</option><option value="x">Aldeas de recolectores</option><option value="a">Clásicas: Grecia y Roma</option></select>
+      </div>
+    </div>
+    <div class="actions"><button class="btn" data-check="#act-6 .mf">Comprobar</button><div class="feedback" role="status"></div></div>
+  </div>
+</section>
+
+<!-- ============ EXPRESIVA ============ -->
+<div class="phase ph-exp" id="fase-expresiva"><h2>Fase expresiva</h2><p>Analiza textos e imágenes y demuestra lo que sabes.</p></div>
+
+<article class="doc ph-exp" id="lectura-kora" data-nav="Texto 1: la aldea de Kora" data-group="Analizo textos e imágenes">
+  <div class="doc-h"><p class="num">Texto para analizar 1 · Relato inspirado en procesos reales</p><h3>La aldea junto al río Kora</h3></div>
+  <div class="tools" data-tools="kora">
+    <span class="lbl">Subraya:</span>
+    <button class="hl-btn" data-mode="b" aria-pressed="true">Azul · qué cambia</button>
+    <button class="hl-btn" data-mode="v" aria-pressed="false">Verde · cómo se organiza</button>
+    <button class="hl-btn" data-mode="r" aria-pressed="false">Rojo · por qué</button>
+    <button class="hl-btn" data-mode="o" aria-pressed="false">Naranja · cuándo</button>
+    <button class="hl-btn" data-mode="x" aria-pressed="false">Borrar</button>
+    <button class="speak" data-speak="kora-body">Escuchar</button>
+  </div>
+  <div class="doc-body" id="kora-body" data-hl="kora">
+    <p><span class="pn">¶1</span><span class="s" data-k="o">Hace unos doce mil años, un grupo de cazadores y recolectoras recorría el valle del río Kora siguiendo a las manadas de ciervos.</span> <span class="s" data-k="r">Andar por su cuenta era arriesgado: las noches heladas, los lobos y las épocas sin frutos amenazaban a cualquiera que se separara del resto.</span> <span class="s" data-k="v">Por eso, varias familias se unieron: cazaban juntas, se turnaban para vigilar y repartían lo que recolectaban.</span></p>
+    <p><span class="pn">¶2</span><span class="s" data-k="o">Con el paso de muchas generaciones, las recolectoras notaron que las semillas caídas junto al campamento germinaban.</span> <span class="s" data-k="b">El grupo comenzó a sembrar y cosechar trigo silvestre.</span> <span class="s" data-k="r b">Como los cultivos necesitaban cuidado todo el año, las familias dejaron de trasladarse y levantaron casas de barro junto al río.</span></p>
+    <p><span class="pn">¶3</span><span class="s" data-k="b">Pronto las cosechas dieron más alimento del que el grupo consumía.</span> <span class="s" data-k="v r">Gracias a ese excedente, no todos tenían que sembrar: unos se volvieron alfareros, otras tejedoras y otros guardianes de los graneros.</span> <span class="s" data-k="b v">Los alfareros empezaron a cambiar vasijas por sal y conchas con aldeas lejanas.</span></p>
+    <p><span class="pn">¶4</span><span class="s" data-k="o b">Siglos después, Kora tenía miles de habitantes, calles, un mercado y una muralla.</span> <span class="s" data-k="r">Con tantos vecinos empezaron las peleas por los campos y por el agua del canal.</span> <span class="s" data-k="v">Un consejo de ancianos y un sacerdote-rey comenzaron a gobernar, y los escribas inventaron signos para registrar impuestos y cosechas.</span></p>
+  </div>
+  <div class="leyenda">
+    <span style="--c:var(--hb);--cb:var(--hb-bd)">Azul: ¿qué cambia?</span>
+    <span style="--c:var(--hv);--cb:var(--hv-bd)">Verde: ¿cómo se organiza?</span>
+    <span style="--c:var(--hr);--cb:var(--hr-bd)">Rojo: ¿por qué?</span>
+    <span style="--c:var(--ho);--cb:var(--ho-bd)">Naranja: ¿cuándo?</span>
+  </div>
+  <div class="doc-foot">
+    <div class="actions" style="margin-top:0"><button class="btn" data-check-hl="kora">Revisar mis colores</button><button class="btn ghost" data-show-hl="kora">Ver las que me faltan</button><div class="feedback" role="status"></div></div>
+  </div>
+</article>
+
+<section class="act ph-exp" id="act-7" data-nav="¿Qué lo hizo posible?" data-group="Analizo textos e imágenes">
+  <header class="act-h"><span class="act-n">8</span><div><h3>¿Qué lo hizo posible?</h3><p class="act-mode">Relación causa-hecho · En parejas</p></div></header>
+  <p>Sin mirar el texto, relaciona cada cambio de Kora con lo que lo hizo posible.</p>
+  <div class="classify wide" data-classify="c3"></div>
+  <div class="actions"><button class="btn" data-check="#act-7 .classify">Comprobar</button><div class="feedback" role="status"></div></div>
+  <div class="q"><p class="q-t"><span class="lt">a)</span> Si en Kora nunca hubiera sobrado alimento, ¿qué cambios no habrían ocurrido?</p><textarea data-q></textarea></div>
+</section>
+
+<section class="act ph-exp" id="act-8" data-nav="Kora crece" data-group="Analizo textos e imágenes">
+  <header class="act-h"><span class="act-n">9</span><div><h3>Kora crece</h3><p class="act-mode">Simulador · En parejas</p></div></header>
+  <p>Mueve el control para hacer crecer la aldea. Cada vez que crece aparece un problema: elige la mejor solución.</p>
+  <div class="pob">
+    <div>
+      <svg id="pobSvg" viewBox="0 0 400 240" role="img" aria-label="Aldea que crece según el control"></svg>
+      <p class="n" id="pobN">20 habitantes</p>
+      <input type="range" id="pobR" min="0" max="4" step="1" value="0" aria-label="Tamaño de la población">
+    </div>
+    <div id="pobProbs"></div>
+  </div>
+  <div class="q"><p class="q-t"><span class="lt">a)</span> ¿Qué necesitó Kora con 20.000 habitantes que no necesitaba con 20?</p><textarea data-q></textarea></div>
+</section>
+
+<section class="act ph-exp" id="act-9" data-nav="Busca en la ciudad" data-group="Analizo textos e imágenes">
+  <header class="act-h"><span class="act-n">10</span><div><h3>Busca en la ciudad</h3><p class="act-mode">Juego de observación · Individual</p></div></header>
+  <p>Una ciudad junto al río, hace cinco mil años. Lee el concepto y toca el lugar de la imagen donde se ve.</p>
+  <div class="find-bar"><span>Busca:</span> <b id="findT">…</b><span class="mem-stats" id="findS"></span></div>
+  <div class="scene" data-scene="s2" id="scene2">
+  <svg viewBox="0 0 800 440" role="img" aria-label="Ciudad antigua junto a un río: casas de adobe, un taller de vasijas, un barco con sacos junto a un puesto de mercado, un escriba con una tablilla, un templo escalonado con un rey arriba y campesinos abajo, y una piedra con leyes grabadas junto a un juez.">
+    <rect width="800" height="440" fill="#F5E2B8"/>
+    <circle cx="90" cy="60" r="30" fill="#F7C95C"/>
+    <rect y="200" width="800" height="170" fill="#E2C98F"/>
+    <path d="M0 370 Q200 350 400 372 T800 366 L800 440 L0 440Z" fill="#4A8BC4"/>
+    <path d="M40 400 q30 -8 60 0 M260 412 q30 -8 60 0 M560 405 q30 -8 60 0" stroke="#9CC9EE" stroke-width="3" fill="none"/>
+    <!-- casas adobe -->
+    <g fill="#C99A62" stroke="#8C6437" stroke-width="2">
+      <rect x="30" y="220" width="70" height="60"/><rect x="95" y="200" width="60" height="80"/><rect x="150" y="235" width="55" height="45"/>
+    </g>
+    <g fill="#5A3A20"><rect x="55" y="250" width="16" height="30"/><rect x="115" y="245" width="16" height="35"/><rect x="170" y="255" width="14" height="25"/><rect x="104" y="214" width="12" height="12"/></g>
+    <!-- taller alfarero -->
+    <path d="M225 230 h90 l-10 -20 h-70z" fill="#B0527A"/><path d="M232 230 v55 M308 230 v55" stroke="#6B3A20" stroke-width="4"/>
+    <use href="#per" x="245" y="236" width="30" height="62" fill="#6B8E4E"/>
+    <g fill="#B86A3A"><path d="M285 296 c-12 0 -14 -18 -5 -24 v-5 h10 v5 c9 6 7 24 -5 24z"/><path d="M302 296 c-9 0 -10 -14 -4 -18 v-4 h8 v4 c6 4 5 18 -4 18z"/><path d="M228 298 c-9 0 -10 -14 -4 -18 v-4 h8 v4 c6 4 5 18 -4 18z"/></g>
+    <!-- escriba -->
+    <use href="#per" x="372" y="262" width="34" height="70" fill="#F2F2F2"/>
+    <rect x="402" y="288" width="26" height="20" rx="3" fill="#C4A071" stroke="#8C6437" stroke-width="2" transform="rotate(-12 415 298)"/>
+    <path d="M408 294 l4 4 M414 292 l4 4 M411 300 l4 4" stroke="#6B4A2A" stroke-width="2"/>
+    <!-- barco y mercado -->
+    <path d="M250 372 h120 l-18 22 h-84z" fill="#8C5A2B"/><path d="M310 372 v-58" stroke="#6B3A20" stroke-width="4"/><path d="M312 318 l38 40 h-38z" fill="#F4EEE0"/>
+    <g fill="#E8D39A" stroke="#A8904F" stroke-width="2"><ellipse cx="270" cy="366" rx="12" ry="9"/><ellipse cx="290" cy="364" rx="12" ry="9"/></g>
+    <use href="#per" x="448" y="300" width="32" height="66" fill="#3F6D8F"/>
+    <path d="M430 335 h58 v20 h-58z" fill="#B0527A"/><g fill="#F2C94C"><circle cx="442" cy="332" r="6"/><circle cx="456" cy="332" r="6"/></g>
+    <!-- zigurat, rey y campesinos -->
+    <g fill="#C9A26A" stroke="#8C6437" stroke-width="2">
+      <rect x="480" y="250" width="200" height="45"/><rect x="505" y="205" width="150" height="45"/><rect x="530" y="160" width="100" height="45"/><rect x="555" y="120" width="50" height="40"/>
+    </g>
+    <path d="M570 295 v-45 M590 295 v-45" stroke="#8C6437" stroke-width="2"/>
+    <use href="#per" x="564" y="46" width="34" height="74" fill="#6A3E9C"/>
+    <path d="M569 56 l5 -12 l6 8 l6 -8 l6 8 l5 -12 v14 h-28z" fill="#F2B705"/>
+    <use href="#per" x="494" y="292" width="28" height="58" fill="#A58A5E"/>
+    <use href="#per" x="524" y="294" width="26" height="56" fill="#8E7650"/>
+    <ellipse cx="510" cy="293" rx="10" ry="7" fill="#E8D39A"/>
+    <!-- estela de leyes y juez -->
+    <path d="M705 300 v-110 q20 -20 40 0 v110z" fill="#5E6670"/>
+    <g stroke="#C7CCD2" stroke-width="2"><path d="M713 205 h24 M713 215 h24 M713 225 h24 M713 235 h24 M713 245 h24 M713 255 h24 M713 265 h24"/></g>
+    <use href="#per" x="748" y="238" width="32" height="66" fill="#A04646"/>
+  </svg>
+  <button class="hot" style="left:15%;top:52%" data-c="Sedentarismo" aria-label="Casas de adobe">?</button>
+  <button class="hot" style="left:34%;top:55%" data-c="División del trabajo" aria-label="Taller de vasijas">?</button>
+  <button class="hot" style="left:39%;top:79%" data-c="Comercio" aria-label="Barco y mercado">?</button>
+  <button class="hot" style="left:51%;top:64%" data-c="Escritura" aria-label="Persona con tablilla">?</button>
+  <button class="hot" style="left:73%;top:26%" data-c="Jerarquía social" aria-label="Templo con rey arriba y campesinos abajo">?</button>
+  <button class="hot" style="left:92%;top:51%" data-c="Sistema político" aria-label="Piedra con leyes y juez">?</button>
+  </div>
+  <div class="find-list" id="findL"></div>
+  <div class="q"><p class="q-t"><span class="lt">a)</span> Elige un lugar de la imagen y explica por qué no podría existir en un campamento nómada.</p><textarea data-q></textarea></div>
+</section>
+
+<section class="act ph-exp" id="act-10" data-nav="¿Qué concepto es?" data-group="Analizo textos e imágenes">
+  <header class="act-h"><span class="act-n">11</span><div><h3>¿Qué concepto es?</h3><p class="act-mode">Situaciones de otras épocas y de Colombia</p></div></header>
+  <div class="classify" data-classify="c1"></div>
+  <div class="actions"><button class="btn" data-check="#act-10 .classify">Comprobar</button><div class="feedback" role="status"></div></div>
+</section>
+
+<article class="doc ph-exp" id="lectura-meso" data-nav="Texto 2: Mesopotamia" data-group="Analizo textos e imágenes">
+  <svg class="doc-art" viewBox="0 0 800 180" aria-hidden="true">
+    <rect width="800" height="180" fill="#F5E2B8"/>
+    <path d="M0 150 C150 120 250 170 400 140 S650 110 800 140 L800 180 L0 180Z" fill="#4A8BC4"/>
+    <path d="M0 30 C200 60 300 20 450 60 S700 90 800 60 L800 80 C700 110 560 80 450 80 S200 80 0 50Z" fill="#6BA5D6"/>
+    <g fill="#C9A26A" stroke="#8C6437" stroke-width="2"><rect x="330" y="105" width="140" height="25"/><rect x="350" y="82" width="100" height="23"/><rect x="372" y="62" width="56" height="20"/></g>
+    <g fill="#6B8E4E"><path d="M120 110 v-30 M130 110 v-26 M140 110 v-30 M600 110 v-28 M610 110 v-32 M620 110 v-26" stroke="#6B8E4E" stroke-width="4"/></g>
+    <text x="20" y="22" font-family="Atkinson Hyperlegible, Verdana, sans-serif" font-size="14" fill="#1B2340">Tigris</text>
+    <text x="20" y="172" font-family="Atkinson Hyperlegible, Verdana, sans-serif" font-size="14" fill="#fff">Éufrates</text>
+  </svg>
+  <div class="doc-h"><p class="num">Texto para analizar 2</p><h3>Mesopotamia, la tierra entre ríos</h3></div>
+  <div class="tools"><span class="lbl">Léelo dos veces.</span><button class="speak" data-speak="meso-body">Escuchar</button></div>
+  <div class="doc-body" id="meso-body">
+    <p><span class="pn">¶1</span>Mesopotamia estaba entre los ríos <b>Tigris</b> y <b>Éufrates</b>, principalmente en el actual Irak. El clima era seco, pero cada primavera los ríos se desbordaban y dejaban un barro fértil. Para aprovechar el agua todo el año y evitar inundaciones, los campesinos construyeron <b>canales de riego</b>, y las cosechas crecieron tanto que sobraba alimento.</p>
+    <p><span class="pn">¶2</span>Ese excedente permitió que surgieran ciudades como Uruk y Ur, con artesanos, comerciantes y sacerdotes. Como había que llevar la cuenta del grano guardado en los templos, los sumerios inventaron hacia el 3200 a. C. la <b>escritura cuneiforme</b>, con signos en forma de cuña sobre tablillas de arcilla.</p>
+    <p><span class="pn">¶3</span>Las ciudades se enfrentaron por el agua y las tierras, y algunos reyes lograron dominar varias. <b>Hammurabi</b> de Babilonia mandó grabar en piedra un código para que todo su reino conociera las mismas leyes y castigos.</p>
+  </div>
+</article>
+
+<section class="act ph-exp" id="act-11" data-nav="Cadenas de Mesopotamia" data-group="Analizo textos e imágenes">
+  <header class="act-h"><span class="act-n">12</span><div><h3>Armo las cadenas de Mesopotamia</h3><p class="act-mode">Causa y consecuencia · Individual</p></div></header>
+  <p>Para cada hecho, elige su causa y su consecuencia según el texto 2.</p>
+  <div class="causal" id="causal"></div>
+  <div class="actions"><button class="btn" data-check="#causal">Comprobar</button><div class="feedback" role="status"></div></div>
+  <div class="q"><p class="q-t"><span class="lt">a)</span> Escribe una de las cadenas con tus palabras, usando «porque» y «por eso».</p><textarea data-q></textarea></div>
+</section>
+
+<section class="act ph-exp" id="act-mapa" data-nav="Mapa de los ríos" data-group="Analizo textos e imágenes">
+  <header class="act-h"><span class="act-n">13</span><div><h3>El mapa de los grandes ríos</h3><p class="act-mode">Lectura de mapa · Individual</p></div></header>
+  <p>Mapa esquemático. Toca cada número y elige el río y la civilización que nació en él.</p>
+  <div class="scene" data-scene="map">
+  <svg viewBox="0 0 800 420" role="img" aria-label="Mapa esquemático de África, Asia occidental, India y China con cuatro ríos numerados.">
+    <rect width="800" height="420" fill="#BFDDF2"/>
+    <path d="M20 120 Q60 80 140 90 L230 110 Q250 170 230 230 Q210 330 160 400 L110 410 Q80 330 60 280 Q30 220 20 170Z" fill="#E7D7A8" stroke="#B89C5E" stroke-width="2"/>
+    <path d="M230 110 Q300 70 420 80 Q520 60 640 70 Q740 80 790 120 L790 300 Q720 330 660 290 Q620 330 560 300 Q520 380 470 360 Q440 300 420 260 Q360 250 330 210 Q290 200 250 190 Q240 150 230 110Z" fill="#E7D7A8" stroke="#B89C5E" stroke-width="2"/>
+    <path d="M240 175 Q300 150 330 210 Q300 230 260 215Z" fill="#BFDDF2"/>
+    <g fill="none" stroke="#2F6FB0" stroke-width="5" stroke-linecap="round">
+      <path d="M170 330 Q175 260 160 200 Q165 150 170 118"/>
+      <path d="M300 110 Q320 150 345 190"/><path d="M280 120 Q300 160 335 195"/>
+      <path d="M470 140 Q465 200 455 250"/>
+      <path d="M720 150 Q660 130 640 170 Q610 200 580 160"/>
+    </g>
+    <g font-family="Atkinson Hyperlegible, Verdana, sans-serif" font-size="14" fill="#566074">
+      <text x="60" y="360">ÁFRICA</text><text x="560" y="110">ASIA</text><text x="30" y="60">Mar Mediterráneo</text>
+    </g>
+  </svg>
+  <button class="hot" style="left:21%;top:52%" data-row="map1">1</button>
+  <button class="hot" style="left:40%;top:36%" data-row="map2">2</button>
+  <button class="hot" style="left:61%;top:48%" data-row="map3">3</button>
+  <button class="hot" style="left:82%;top:30%" data-row="map4">4</button>
+  </div>
+  <div class="mapa-rows" id="mapaRows"></div>
+  <div class="actions"><button class="btn" data-check="#mapaRows">Comprobar</button><div class="feedback" role="status"></div></div>
+  <div class="q"><p class="q-t"><span class="lt">a)</span> Si fueras un campesino de esa época, ¿junto a cuál de estos ríos vivirías y qué harías allí?</p><textarea data-q></textarea></div>
+</section>
+
+<section class="act ph-exp" id="act-12" data-nav="¿Verdadero o falso?" data-group="Analizo textos e imágenes">
+  <header class="act-h"><span class="act-n">14</span><div><h3>¿Verdadero o falso?</h3><p class="act-mode">Si es falsa, corrígela</p></div></header>
+  <div class="vf" id="vf"></div>
+</section>
+
+<article class="doc ph-exp" id="lectura-grecia" data-nav="Texto 3: Grecia" data-group="Analizo textos e imágenes">
+  <svg class="doc-art" viewBox="0 0 800 180" aria-hidden="true">
+    <rect width="800" height="180" fill="#DCEBF7"/>
+    <path d="M0 120 L90 60 L170 110 L260 40 L360 115 L460 55 L560 110 L660 50 L800 110 L800 180 L0 180Z" fill="#9FB39A"/>
+    <path d="M0 150 C200 140 600 160 800 148 L800 180 L0 180Z" fill="#3D7FB8"/>
+    <g fill="#F4EEE0" stroke="#A89E88" stroke-width="2"><path d="M300 80 L400 50 L500 80Z"/><rect x="300" y="80" width="200" height="10"/><rect x="310" y="90" width="12" height="42"/><rect x="340" y="90" width="12" height="42"/><rect x="370" y="90" width="12" height="42"/><rect x="418" y="90" width="12" height="42"/><rect x="448" y="90" width="12" height="42"/><rect x="478" y="90" width="12" height="42"/><rect x="296" y="132" width="208" height="8"/></g>
+  </svg>
+  <div class="doc-h"><p class="num">Texto para analizar 3</p><h3>Grecia: ciudades que se gobernaban solas</h3></div>
+  <div class="tools"><span class="lbl">Busca qué es una polis y qué aportes dejaron.</span><button class="speak" data-speak="grecia-body">Escuchar</button></div>
+  <div class="doc-body" id="grecia-body">
+    <p><span class="pn">¶1</span>Grecia es una península de montañas rodeada de mar e islas. Las montañas separaban los valles; por eso los griegos no formaron un solo reino, sino muchas ciudades independientes llamadas <b>polis</b>, cada una con su territorio, leyes, gobierno y ejército.</p>
+    <p><span class="pn">¶2</span>Esparta era una polis militar gobernada por dos reyes y un consejo de ancianos. En Atenas, hacia el 508 a. C., los ciudadanos empezaron a votar las leyes en una asamblea: nació la <b>democracia</b>, «gobierno del pueblo». Las mujeres, los extranjeros y las personas esclavizadas no podían participar.</p>
+    <p><span class="pn">¶3</span>Los griegos también crearon la <b>filosofía</b>, el teatro, templos con columnas y esculturas muy realistas. Siglos después, los romanos admiraron esa cultura y la extendieron; luego llegó a Europa y a América.</p>
+  </div>
+</article>
+
+<section class="act ph-exp" id="act-13" data-nav="Comprendo la polis" data-group="Analizo textos e imágenes">
+  <header class="act-h"><span class="act-n">15</span><div><h3>Comprendo la polis</h3><p class="act-mode">Selección múltiple</p></div></header>
+  <div data-mcq="m1"></div>
+</section>
+
+<section class="act ph-exp" id="act-comic" data-nav="Historieta: la asamblea" data-group="Analizo textos e imágenes">
+  <header class="act-h"><span class="act-n">16</span><div><h3>Historieta: un día en la asamblea de Atenas</h3><p class="act-mode">Lee las viñetas y responde</p></div></header>
+  <div class="comic">
+    <figure><svg viewBox="0 0 240 200" aria-hidden="true"><rect width="240" height="200" fill="#DCEBF7"/><rect y="150" width="240" height="50" fill="#CFC6AE"/><use href="#per" x="40" y="80" width="40" height="84" fill="#F4EEE0"/><use href="#per" x="150" y="80" width="40" height="84" fill="#7FA3EA"/><path d="M92 20 h140 v44 h-110 l-12 12 v-12 h-18z" fill="#fff" stroke="#566074" stroke-width="2"/><text x="162" y="38" text-anchor="middle" font-size="12" font-family="Verdana,sans-serif" fill="#1B2340">¡Vamos a la asamblea!</text><text x="162" y="54" text-anchor="middle" font-size="12" font-family="Verdana,sans-serif" fill="#1B2340">Hoy se vota una ley.</text></svg><figcaption>1</figcaption></figure>
+    <figure><svg viewBox="0 0 240 200" aria-hidden="true"><rect width="240" height="200" fill="#DCEBF7"/><rect y="150" width="240" height="50" fill="#CFC6AE"/><rect x="100" y="110" width="40" height="40" fill="#A89E88"/><use href="#per" x="100" y="30" width="40" height="84" fill="#A3263A"/><use href="#per" x="20" y="100" width="30" height="62" fill="#F4EEE0"/><use href="#per" x="190" y="100" width="30" height="62" fill="#7FA3EA"/><path d="M128 14 h108 v44 h-80 l-10 10 v-10 h-18z" fill="#fff" stroke="#566074" stroke-width="2"/><text x="182" y="32" text-anchor="middle" font-size="11" font-family="Verdana,sans-serif" fill="#1B2340">Propongo construir</text><text x="182" y="47" text-anchor="middle" font-size="11" font-family="Verdana,sans-serif" fill="#1B2340">más barcos.</text></svg><figcaption>2</figcaption></figure>
+    <figure><svg viewBox="0 0 240 200" aria-hidden="true"><rect width="240" height="200" fill="#DCEBF7"/><rect y="150" width="240" height="50" fill="#CFC6AE"/><g fill="#C68B59"><use href="#per" x="20" y="90" width="34" height="72" fill="#F4EEE0"/><use href="#per" x="70" y="90" width="34" height="72" fill="#7FA3EA"/><use href="#per" x="120" y="90" width="34" height="72" fill="#6DC29A"/><use href="#per" x="170" y="90" width="34" height="72" fill="#E2B24A"/></g><path d="M37 96 v-26 M87 96 v-26 M137 96 v-26" stroke="#C68B59" stroke-width="6" stroke-linecap="round"/><text x="120" y="40" text-anchor="middle" font-size="14" font-weight="700" font-family="Verdana,sans-serif" fill="#1B2340">¿Quién está de acuerdo?</text></svg><figcaption>3</figcaption></figure>
+    <figure><svg viewBox="0 0 240 200" aria-hidden="true"><rect width="240" height="200" fill="#EFE6D4"/><rect y="150" width="240" height="50" fill="#CFC6AE"/><rect x="170" y="70" width="64" height="80" fill="#C9A26A"/><rect x="180" y="86" width="30" height="40" fill="#DCEBF7"/><use href="#per" x="30" y="80" width="40" height="84" fill="#B0527A"/><use href="#per" x="85" y="90" width="34" height="72" fill="#8E7650"/><path d="M34 14 h130 v44 h-90 l-12 12 v-12 h-28z" fill="#fff" stroke="#566074" stroke-width="2"/><text x="99" y="32" text-anchor="middle" font-size="11" font-family="Verdana,sans-serif" fill="#1B2340">Nosotras no podemos</text><text x="99" y="47" text-anchor="middle" font-size="11" font-family="Verdana,sans-serif" fill="#1B2340">ir a votar.</text></svg><figcaption>4</figcaption></figure>
+  </div>
+  <div class="classify" data-classify="cm"></div>
+  <div class="actions"><button class="btn" data-check="#act-comic .classify">Comprobar</button><div class="feedback" role="status"></div></div>
+  <div class="q"><p class="q-t"><span class="lt">a)</span> Mira la viñeta 4. ¿Era la democracia de Atenas igual a la de Colombia hoy? ¿Por qué?</p><textarea data-q></textarea></div>
+</section>
+
+<section class="act ph-exp" id="act-14" data-nav="Grecia en Bogotá" data-group="Analizo textos e imágenes">
+  <header class="act-h"><span class="act-n">17</span><div><h3>Grecia está en Bogotá</h3><p class="act-mode">Lectura de imagen · Individual</p></div></header>
+  <p>Toca cada letra y elige qué aporte griego reconoces.</p>
+  <div class="scene" data-scene="s3">
+  <svg viewBox="0 0 800 400" role="img" aria-label="Escena de Bogotá hoy: un edificio con columnas, una escultura, estudiantes votando en una urna, un teatro con telón y dos estudiantes debatiendo.">
+    <rect width="800" height="400" fill="#DCE8F2"/>
+    <path d="M0 200 L80 150 L160 185 L260 120 L360 175 L470 130 L580 170 L690 125 L800 165 L800 260 L0 260Z" fill="#7FA08A"/>
+    <rect y="320" width="800" height="80" fill="#B8B3A6"/>
+    <!-- edificio con columnas -->
+    <g fill="#F1ECE0" stroke="#A89E88" stroke-width="2">
+      <rect x="20" y="130" width="260" height="22"/><rect x="20" y="152" width="260" height="14"/>
+      <rect x="34" y="166" width="16" height="140"/><rect x="72" y="166" width="16" height="140"/><rect x="110" y="166" width="16" height="140"/><rect x="148" y="166" width="16" height="140"/><rect x="186" y="166" width="16" height="140"/><rect x="224" y="166" width="16" height="140"/><rect x="258" y="166" width="16" height="140"/>
+      <rect x="14" y="306" width="272" height="14"/>
+    </g>
+    <!-- escultura -->
+    <rect x="302" y="270" width="40" height="50" fill="#9A9486"/>
+    <g fill="#E4E0D6" stroke="#A89E88" stroke-width="1.5"><circle cx="322" cy="208" r="10"/><path d="M312 262 l4 -42 q6 -6 12 0 l4 42z"/><path d="M314 226 l-12 16 M330 226 l12 -18"/></g>
+    <!-- votación -->
+    <rect x="390" y="268" width="80" height="10" fill="#6B4A2A"/><path d="M398 278 v42 M462 278 v42" stroke="#6B4A2A" stroke-width="5"/>
+    <rect x="410" y="232" width="40" height="36" fill="#F2B705" stroke="#9A640A" stroke-width="2"/><rect x="420" y="232" width="20" height="4" fill="#1B2340"/>
+    <path d="M424 214 h14 v18 h-14z" fill="#fff" stroke="#566074"/>
+    <use href="#nino" x="370" y="244" width="36" height="76" fill="#24478F"/>
+    <use href="#nino" x="468" y="244" width="36" height="76" fill="#A3263A"/>
+    <!-- teatro -->
+    <rect x="515" y="160" width="140" height="120" fill="#3B2A1E"/>
+    <path d="M515 160 h70 q-20 50 -55 120 h-15z M655 160 h-70 q20 50 55 120 h15z" fill="#A3263A"/>
+    <rect x="505" y="280" width="160" height="16" fill="#6B4A2A"/>
+    <use href="#per" x="570" y="206" width="32" height="74" fill="#F2B705"/>
+    <g fill="#2E3340"><circle cx="530" cy="318" r="9"/><circle cx="560" cy="318" r="9"/><circle cx="600" cy="318" r="9"/><circle cx="640" cy="318" r="9"/></g>
+    <!-- debate -->
+    <use href="#nino" x="682" y="246" width="36" height="76" fill="#2E6A4F"/>
+    <use href="#nino" x="742" y="246" width="36" height="76" fill="#5E4B8B"/>
+    <g fill="#fff" stroke="#566074" stroke-width="2"><path d="M680 196 h44 v30 h-26 l-8 10 v-10 h-10z"/><path d="M734 188 h62 v30 h-14 v10 l-8 -10 h-40z"/></g>
+    <text x="702" y="218" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#24478F">?</text>
+    <text x="765" y="208" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-weight="700" fill="#2E6A4F">¿por qué?</text>
+  </svg>
+  <button class="hot" style="left:19%;top:40%" data-row="s3A">A</button>
+  <button class="hot" style="left:40%;top:52%" data-row="s3B">B</button>
+  <button class="hot" style="left:54%;top:66%" data-row="s3C">C</button>
+  <button class="hot" style="left:74%;top:34%" data-row="s3D">D</button>
+  <button class="hot" style="left:92%;top:40%" data-row="s3E">E</button>
+  </div>
+  <div class="hot-rows" data-hotrows="s3"></div>
+  <div class="actions"><button class="btn" data-check="#act-14 .hot-rows">Comprobar</button><div class="feedback" role="status"></div></div>
+  <p style="margin-top:18px"><b>Modelo de cadena:</b></p>
+  <div class="cadena">
+    <div class="c ca"><b>Aporte</b>Los griegos hacían juegos deportivos en Olimpia.</div>
+    <div class="ar">→</div>
+    <div class="c he"><b>Se transmitió</b>En 1896 se revivieron para todas las naciones.</div>
+    <div class="ar">→</div>
+    <div class="c co"><b>Efecto hoy</b>Colombia compite cada cuatro años en los Olímpicos.</div>
+  </div>
+  <div class="q"><p class="q-t"><span class="lt">a)</span> Ahora arma la cadena del <b>teatro</b>: aporte → cómo se transmitió → efecto hoy.</p><textarea data-q></textarea></div>
+</section>
+
+<section class="act ph-exp" id="act-15" data-nav="Línea del tiempo" data-group="Demuestro">
+  <header class="act-h"><span class="act-n">18</span><div><h3>Ordeno la línea del tiempo</h3><p class="act-mode">Usa las flechas · Individual</p></div></header>
+  <p>Ordena del más antiguo (arriba) al más reciente (abajo).</p>
+  <ol class="tl" id="tl"></ol>
+  <div class="actions"><button class="btn" id="tlCheck">Comprobar</button><button class="btn ghost" id="tlMix">Mezclar</button><div class="feedback" role="status"></div></div>
+</section>
+
+<section class="act ph-exp" id="act-16" data-nav="Reto final" data-group="Demuestro">
+  <header class="act-h"><span class="act-n">19</span><div><h3>Reto final</h3><p class="act-mode">Ocho preguntas · Sin mirar los textos</p></div></header>
+  <div data-mcq="m2"></div>
+</section>
+
+<section class="act ph-exp" id="act-17" data-nav="Cuento la historia" data-group="Demuestro">
+  <header class="act-h"><span class="act-n">20</span><div><h3>La abuela de Kora cuenta la historia</h3><p class="act-mode">Producción escrita · Individual</p></div></header>
+  <p class="situacion">Eres una anciana de Kora. Tus nietos no creen que la aldea fue alguna vez un grupo que vivía en movimiento. Cuéntales cómo cambió todo.</p>
+  <div class="q"><textarea data-q data-label="Relato de síntesis" style="min-height:170px" id="sintesis"></textarea><p class="progress-t" id="sintT" style="text-align:right;margin:4px 0 0"></p></div>
+  <div class="check">
+    <label><input type="checkbox" data-q data-label="Revisión · conceptos"> Usé por lo menos cuatro conceptos de la guía.</label>
+    <label><input type="checkbox" data-q data-label="Revisión · conectores"> Usé al menos dos conectores de causa o consecuencia.</label>
+    <label><input type="checkbox" data-q data-label="Revisión · por qué"> Expliqué por qué ocurrió cada cambio.</label>
+  </div>
+</section>
+
+<div class="phase ph-exp" id="cierre" data-nav="Autoevaluación" data-group="Cierre"><h2>Autoevaluación</h2><p>Sé honesto u honesta: así sabes qué repasar.</p></div>
+<div class="block">
+  <div class="semaforo" id="semaforo"></div>
+  <div class="q"><p class="q-t">Lo que voy a repasar otra vez:</p><textarea data-q data-label="Plan de repaso"></textarea></div>
+</div>
+<div class="block">
+  <h3 style="margin-top:0">El día de la prueba</h3>
+  <div class="tips">
+    <p><b>Esfero y calma.</b> No se aceptan tachones: piensa antes de escribir.</p>
+    <p><b>Primero la pregunta.</b> Luego el texto o la imagen.</p>
+    <p><b>Cuatro colores.</b> Azul, verde, rojo y naranja.</p>
+    <p><b>Explica, no enumeres.</b> Usa porque, por eso, gracias a.</p>
+  </div>
+</div>
+
+<div class="final">
+  <h3>Mis respuestas</h3>
+  <p style="margin:0 0 4px">Descárgalas o muéstralas para copiarlas y entregarlas.</p>
+  <div class="actions">
+    <button class="btn" id="dlBtn" hidden>Descargar respuestas</button>
+    <button class="btn ghost" id="verBtn">Mostrar mis respuestas</button>
+    <button class="btn ghost" id="borrarBtn">Empezar de nuevo</button>
+    <div class="feedback" id="dlFb" role="status"></div>
+  </div>
+  <textarea id="resumen" readonly aria-label="Resumen de respuestas"></textarea>
+</div>
+</div>
+</main>
+</div>
+<script>
+window.GUIDE = {
+  file: "Respuestas_Guia_Estudio_Prueba1_IV_6",
+  title: "Guía de estudio · Prueba Dominguista 1 · IV periodo · Grado 6.°",
+  groupColors: { "Fase afectiva": "var(--afe)", "Fase cognitiva": "var(--cog)", "Analizo textos e imágenes": "var(--exp)", "Demuestro": "var(--exp)", "Cierre": "var(--exp)" },
+  po: [
+    ["Persona que vive sin lugar fijo, siguiendo a los animales.", "NOMADA"],
+    ["Lo que sobra de la cosecha.", "EXCEDENTE"],
+    ["Ciudad-Estado griega.", "POLIS"],
+    ["Persona que escribía en tablillas en Mesopotamia.", "ESCRIBA"],
+    ["Obra que lleva agua del río a los cultivos.", "CANAL"],
+    ["Reunión donde los atenienses votaban las leyes.", "ASAMBLEA"]
+  ],
+  mapa: [
+    ["1", "Nilo", "Egipto"], ["2", "Tigris y Éufrates", "Mesopotamia"], ["3", "Indo", "India antigua"], ["4", "Amarillo", "China antigua"]
+  ],
+  sg: [
+    ["Cazar un mamut", "g", "Un animal de varias toneladas solo se podía cazar entre muchos."],
+    ["Recoger unas cuantas moras", "s", "Se puede solo, aunque en grupo se recolecta más y más rápido."],
+    ["Vigilar el campamento todas las noches", "g", "Nadie aguanta despierto todas las noches: hay que turnarse."],
+    ["Cuidar a un bebé mientras consigues comida", "g", "Mientras unos buscan alimento, otros cuidan a los niños."],
+    ["Levantar un refugio grande de pieles", "g", "Sostener los palos y amarrar las pieles exige varias manos."],
+    ["Tomar agua del río", "s", "Se puede solo, aunque el grupo sabe dónde está el agua segura."]
+  ],
+  hot: {
+    s1: { options: ["Protección contra el frío y la lluvia", "Seguridad frente a los animales", "Conseguir alimento", "Cuidado de los niños", "Calor, luz y cocina compartidos"],
+      rows: [["A", "La fogata", "Calor, luz y cocina compartidos"], ["B", "La tienda de pieles", "Protección contra el frío y la lluvia"], ["C", "Los cazadores", "Conseguir alimento"], ["D", "La persona sobre la roca", "Seguridad frente a los animales"], ["E", "El adulto con los niños", "Cuidado de los niños"]] },
+    s3: { options: ["Arquitectura", "Arte", "Democracia", "Teatro", "Filosofía"],
+      rows: [["A", "El edificio con columnas", "Arquitectura"], ["B", "La figura sobre el pedestal", "Arte"], ["C", "Los estudiantes y la urna", "Democracia"], ["D", "El escenario con telón", "Teatro"], ["E", "Los estudiantes que se preguntan por qué", "Filosofía"]] }
+  },
+  mem: [
+    ["Sedentarismo", "Quedarse a vivir en un mismo lugar"],
+    ["Excedente", "Lo que sobra después de cubrir lo necesario"],
+    ["División del trabajo", "Cada persona se dedica a un oficio"],
+    ["Comercio", "Cambiar lo que tengo por lo que necesito"],
+    ["Escritura", "Marcas para guardar cuentas e ideas"],
+    ["Polis", "Ciudad griega que se gobernaba sola"]
+  ],
+  classify: {
+    cc: { options: ["Causa", "Consecuencia"], items: [
+      ["Como los cultivos necesitaban cuidado, <mark class='u'>las familias se quedaron junto al río</mark>.", "Consecuencia"],
+      ["<mark class='u'>Porque había lobos cerca</mark>, el grupo hacía turnos de vigilancia.", "Causa"],
+      ["Sobraba grano; <mark class='u'>por eso algunos se hicieron alfareros</mark>.", "Consecuencia"],
+      ["Los escribas inventaron signos <mark class='u'>ya que había que contar los impuestos</mark>.", "Causa"],
+      ["<mark class='u'>Debido a las montañas</mark>, Grecia se dividió en muchas polis.", "Causa"]
+    ] },
+    cm: { options: ["Viñeta 1", "Viñeta 2", "Viñeta 3", "Viñeta 4"], items: [
+      ["¿En qué viñeta un ciudadano propone una ley?", "Viñeta 2"],
+      ["¿En qué viñeta los ciudadanos votan levantando la mano?", "Viñeta 3"],
+      ["¿En qué viñeta se ve quiénes no podían participar?", "Viñeta 4"],
+      ["¿En qué viñeta se anuncia que habrá votación?", "Viñeta 1"]
+    ] },
+    c3: { options: ["Andar solo era peligroso", "Las semillas germinaban", "Los cultivos pedían cuidado diario", "Sobraba alimento", "Había que registrar impuestos"], items: [
+      ["Los escribas inventan signos en tablillas.", "Había que registrar impuestos"],
+      ["Varias familias se juntan en un mismo campamento.", "Andar solo era peligroso"],
+      ["Aparecen alfareros, tejedoras y guardianes de graneros.", "Sobraba alimento"],
+      ["El grupo empieza a sembrar trigo.", "Las semillas germinaban"],
+      ["Las familias levantan casas de barro y ya no se trasladan.", "Los cultivos pedían cuidado diario"]
+    ] },
+    c1: { options: ["Sedentarismo", "División del trabajo", "Jerarquía social", "Sistema político", "Escritura", "Comercio"], items: [
+      ["En el mercado de Zipaquirá, los muiscas cambiaban panes de sal por mantas de algodón.", "Comercio"],
+      ["En Egipto, el faraón estaba arriba; debajo, sacerdotes y nobles; luego escribas; y en la base, campesinos y personas esclavizadas.", "Jerarquía social"],
+      ["Junto al río Indo, las familias dejaron los refugios temporales y vivieron por generaciones en casas de ladrillo.", "Sedentarismo"],
+      ["En una aldea del río Amarillo, unos criaban gusanos de seda, otros tejían y otros cultivaban mijo.", "División del trabajo"],
+      ["En Colombia, cada cuatro años se elige presidente y el Congreso aprueba las leyes.", "Sistema político"],
+      ["Los mayas tallaban glifos en piedra para recordar fechas y reyes.", "Escritura"],
+      ["En Paloquemao, en Bogotá, se venden frutas traídas desde el Tolima y el Huila.", "Comercio"]
+    ] }
+  },
+  causal: [
+    ["Construcción de canales de riego", "El clima era seco y las crecidas eran peligrosas", "Las cosechas crecieron y sobró alimento"],
+    ["Surgimiento de ciudades como Uruk y Ur", "Había excedente de alimento", "Aparecieron artesanos, comerciantes y sacerdotes"],
+    ["Invención de la escritura cuneiforme", "Había que llevar la cuenta del grano de los templos", "Quedaron registros en tablillas de arcilla"],
+    ["Código de Hammurabi", "Las ciudades peleaban y un rey dominó varias", "Todo el reino conoció las mismas leyes"]
+  ],
+  causalExtra: ["Los griegos vivían entre montañas", "Los habitantes volvieron a ser nómadas"],
+  vf: [
+    ["Mesopotamia estaba entre el Nilo y el Éufrates.", "F", "el ¶1 del texto 2"],
+    ["Los canales de riego ayudaron a que sobrara alimento.", "V", "el ¶1 del texto 2"],
+    ["Los sumerios inventaron la escritura para escribir poemas.", "F", "el ¶2 del texto 2"],
+    ["El código de Hammurabi se grabó en piedra.", "V", "el ¶3 del texto 2"],
+    ["En Atenas, todos los habitantes votaban en la asamblea.", "F", "el ¶2 del texto 3"],
+    ["Las montañas explican por qué Grecia se dividió en polis.", "V", "el ¶1 del texto 3"]
+  ],
+  pob: {
+    steps: [20, 200, 2000, 10000, 20000],
+    houses: [2, 5, 10, 18, 28],
+    calm: "Con 20 personas se ponen de acuerdo hablando alrededor del fuego.",
+    probs: [
+      ["Todos quieren regar con el agua del canal al mismo tiempo.", ["Que riegue quien llegue primero", "Turnos de riego para cada familia", "Cerrar el canal"], 1],
+      ["Alguien se lleva grano del granero común.", ["Que cada familia vigile su parte", "Repartir todo el grano de una vez", "Un registro escrito de lo que entra y sale"], 2],
+      ["Dos familias pelean por el límite de sus tierras.", ["Un consejo o juez que decida con normas conocidas", "Que gane la familia más fuerte", "Que las dos se vayan de la aldea"], 0],
+      ["Llegan comerciantes y cada quien mide el grano a su manera.", ["Prohibir el comercio", "Que cada uno use su medida", "Medidas iguales para todos en el mercado"], 2]
+    ]
+  },
+  tl: [
+    ["Comienza la agricultura en el Creciente Fértil", "Hace unos 12.000 años"],
+    ["Los sumerios inventan la escritura cuneiforme", "Hacia el 3200 a. C."],
+    ["Hammurabi graba su código de leyes", "Hacia el 1750 a. C."],
+    ["Primeros Juegos Olímpicos en Olimpia", "776 a. C."],
+    ["Atenas vota sus leyes en asamblea", "Hacia el 508 a. C."],
+    ["Primeros Juegos Olímpicos modernos", "1896"]
+  ],
+  mcq: {
+    m1: [
+      ["¿Por qué los griegos formaron muchas ciudades independientes y no un solo reino?", ["Un emperador dividió el territorio.", "Las montañas y el mar separaban a las comunidades.", "No conocían la agricultura.", "Vivían junto a un solo gran río."], 1, "Las montañas separaban los valles; cada comunidad se organizó por su cuenta."],
+      ["¿Qué tenían en común Atenas y Esparta?", ["Obedecían al mismo rey.", "Las dos eran democracias.", "Cada una tenía sus propias leyes y gobierno.", "Estaban en Egipto."], 2, "Eran polis distintas, pero ambas independientes."],
+      ["Democracia significa:", ["Gobierno de uno solo.", "Gobierno de los más ricos.", "Gobierno de los guerreros.", "Gobierno del pueblo."], 3, "Del griego dêmos, pueblo, y krátos, poder."],
+      ["¿Quiénes no votaban en la asamblea de Atenas?", ["Los ciudadanos varones.", "Las mujeres, los extranjeros y las personas esclavizadas.", "Los filósofos.", "Los nacidos en Atenas."], 1, "Era gobierno del pueblo, pero no de todo el pueblo."]
+    ],
+    m2: [
+      ["Un grupo que se traslada siguiendo a los animales es…", ["sedentario", "nómada", "una civilización", "una polis"], 1, "Nómada: sin lugar fijo."],
+      ["¿Para qué inventaron los sumerios la escritura cuneiforme?", ["Para llevar la cuenta del grano", "Para escribir cartas a Grecia", "Para decorar los templos", "Para enseñar a leer a los niños"], 0, "Necesitaban registrar lo que se guardaba y se pagaba."],
+      ["¿Entre qué ríos estaba Mesopotamia?", ["Nilo y Amazonas", "Tigris y Éufrates", "Indo y Amarillo", "Magdalena y Cauca"], 1, "«Mesopotamia» significa tierra entre ríos."],
+      ["En Egipto, ¿quién estaba en la cima de la pirámide social?", ["Los campesinos", "Los escribas", "El faraón", "Los comerciantes"], 2, "El faraón tenía el mayor poder."],
+      ["¿Qué buscaba el código de Hammurabi?", ["Que cada ciudad tuviera leyes distintas", "Que todo el reino conociera las mismas leyes", "Eliminar a los reyes", "Prohibir la escritura"], 1, "Leyes iguales y conocidas en todo el reino."],
+      ["Un excedente es…", ["lo que falta", "lo que sobra después de cubrir lo necesario", "un tipo de gobierno", "una herramienta"], 1, "El excedente liberó a algunas personas de sembrar."],
+      ["¿En qué se diferenciaba Esparta de Atenas?", ["Esparta era militar y tenía reyes", "Esparta votaba en asamblea", "Esparta no era una polis", "Esparta estaba en Mesopotamia"], 0, "Esparta tenía dos reyes y un consejo de ancianos."],
+      ["¿Por qué la agricultura llevó al sedentarismo?", ["Los cultivos necesitan cuidado en el mismo lugar", "Los animales desaparecieron", "Llegó el invierno", "Se inventó la escritura"], 0, "Quien siembra tiene que quedarse a cuidar y cosechar."]
+    ]
+  },
+  semaforo: [
+    "Explico por qué los seres humanos empezaron a vivir en comunidad.",
+    "Explico cómo un cambio llevó al siguiente, desde la comunidad hasta la civilización.",
+    "Reconozco sedentarismo, división del trabajo, jerarquía, sistema político, escritura y comercio.",
+    "Explico por qué una población que crece necesita normas y autoridades.",
+    "Encuentro la causa y la consecuencia de un hecho en un texto.",
+    "Explico qué era una polis y cómo influyó un aporte griego."
+  ],
+flash: [
+    ["Nómada", "Grupo que no tiene un lugar fijo y se desplaza buscando alimento.", "Los cazadores que seguían a las manadas."],
+    ["Comunidad", "Grupo de personas que viven juntas, cooperan y comparten normas y recursos.", "Familias que se unen para cazar y cuidarse."],
+    ["Agricultura", "Actividad de sembrar y cosechar plantas para obtener alimento.", "Sembrar trigo, maíz o arroz."],
+    ["Sedentarismo", "Quedarse a vivir siempre en el mismo lugar, en vez de trasladarse de un sitio a otro.", "Casas de barro junto al río."],
+    ["Excedente", "Producción que sobra después de cubrir lo que el grupo necesita.", "Graneros llenos de cebada."],
+    ["División del trabajo", "Repartir las tareas para que cada persona se dedique a lo que sabe hacer.", "Alfareros, tejedoras, agricultores."],
+    ["Comercio", "Entregar algo que tengo a cambio de algo que necesito, con vecinos o con pueblos lejanos.", "Cambiar vasijas por sal."],
+    ["Jerarquía social", "Orden de la sociedad por niveles, en el que unos grupos tienen más poder o riqueza que otros.", "Rey, sacerdotes, escribas, campesinos."],
+    ["Sistema político", "Manera en que una sociedad decide quién manda, cómo se hacen las leyes y cómo se hacen cumplir.", "Un rey que dicta leyes."],
+    ["Escritura", "Invento que permite guardar cuentas, ideas y leyes con marcas que otras personas pueden leer.", "Tablillas con signos cuneiformes."],
+    ["Civilización", "Forma de organización social compleja con ciudades, gobierno, leyes, escritura, comercio y división del trabajo.", "Egipto, Mesopotamia, Grecia."],
+    ["Civilización fluvial", "Civilización que surgió junto a un gran río que le daba agua y tierras fértiles.", "Nilo, Tigris y Éufrates, Indo, río Amarillo."],
+    ["Polis", "Ciudad griega que se gobernaba sola, como si fuera un pequeño país.", "Atenas, Esparta."],
+    ["Democracia", "Forma de gobierno en la que el pueblo participa en las decisiones.", "La asamblea de Atenas; las elecciones en Colombia."]
+  ]
+};
+
+</script>
+<script>
+(function(){
+"use strict";
+const G=window.GUIDE;
+const $=(s,c=document)=>c.querySelector(s);
+const $$=(s,c=document)=>Array.from(c.querySelectorAll(s));
+const el=(t,a={},h="")=>{const e=document.createElement(t);for(const[k,v]of Object.entries(a))e.setAttribute(k,v);if(h)e.innerHTML=h;return e;};
+const fb=(box,cls,msg)=>{if(!box)return;box.className="feedback show "+cls;box.textContent=msg;};
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const esc=s=>String(s).replace(/"/g,"&quot;");
+const KEY="guia6_prueba1_iv_v4";
+let store={};try{store=JSON.parse(localStorage.getItem(KEY)||"{}");}catch(e){store={};}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(store));}catch(e){}};
+const results={};
+const played=s=>{const sec=s.closest("[data-nav]");if(sec)sec.dataset.played="1";progress();};
+const segHTML=(opts)=>opts.map(([v,t])=>`<button data-v="${v}" aria-pressed="false">${t}</button>`).join("");
+const opt=(list)=>`<option value="">Elegir…</option>`+list.map(o=>`<option>${o}</option>`).join("");
+
+
+/* ---------- palabra oculta ---------- */
+(function(){
+  const norm=t=>t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toUpperCase();
+  const box=document.getElementById("po");
+  G.po.forEach(([pista,w],i)=>{
+    const r=document.createElement("div");r.className="po-row";
+    r.innerHTML=`<span>${i+1}. ${pista} <small style="color:var(--muted)">(${w.length} letras)</small></span>`;
+    const b=document.createElement("div");b.className="po-boxes";b.dataset.w=w;
+    b.setAttribute("data-q","");b.dataset.get="po";b.dataset.label="Palabra oculta · "+pista;
+    for(let k=0;k<w.length;k++){const inp=document.createElement("input");inp.maxLength=1;inp.setAttribute("aria-label",`Letra ${k+1} de ${w.length}`);
+      inp.addEventListener("input",()=>{if(inp.value&&inp.nextElementSibling)inp.nextElementSibling.focus();});
+      inp.addEventListener("keydown",e=>{if(e.key==="Backspace"&&!inp.value&&inp.previousElementSibling)inp.previousElementSibling.focus();});
+      b.appendChild(inp);}
+    r.appendChild(b);box.appendChild(r);
+  });
+  document.getElementById("poCheck").addEventListener("click",()=>{
+    let ok=0;const f=document.querySelector("#act-po .actions .feedback");
+    box.querySelectorAll(".po-boxes").forEach(b=>{const v=norm(Array.from(b.children).map(x=>x.value).join(""));const g=v===b.dataset.w;
+      Array.from(b.children).forEach(x=>{x.classList.toggle("is-ok",g);x.classList.toggle("is-bad",!g&&v.length>0);});if(g)ok++;});
+    f.className="feedback show "+(ok===G.po.length?"ok":"mid");f.textContent=ok===G.po.length?"¡Todas las palabras correctas!":`${ok} de ${G.po.length} palabras correctas.`;
+    const sec=document.getElementById("act-po");sec.dataset.played="1";
+  });
+})();
+/* ---------- mapa ---------- */
+(function(){
+  const box=document.getElementById("mapaRows");
+  const rios=G.mapa.map(x=>x[1]),civs=G.mapa.map(x=>x[2]);
+  const o=l=>`<option value="">Elegir…</option>`+l.map(x=>`<option>${x}</option>`).join("");
+  G.mapa.forEach(([n,r,c])=>{
+    const row=document.createElement("div");row.className="row";row.id="map"+n;
+    row.innerHTML=`<span class="lt">${n}</span><select data-q data-label="Mapa ${n} · río" data-answer="${r}" aria-label="Río ${n}">${o(rios.slice().sort())}</select><select data-q data-label="Mapa ${n} · civilización" data-answer="${c}" aria-label="Civilización ${n}">${o(civs.slice().sort())}</select>`;
+    box.appendChild(row);
+  });
+})();
+/* ---------- solo o en grupo ---------- */
+G.sg.forEach(([t,a,exp],i)=>{
+  const it=el("div",{class:"sg-item"},`<span>${t}</span>`);
+  const s=el("div",{class:"seg",role:"group","aria-label":t,"data-q":"","data-get":"seg","data-label":"¿Solo o en grupo? · "+t,"data-id":"sg"+i});
+  s.innerHTML=segHTML([["s","Solo"],["g","En grupo"]]);
+  const f=el("div",{class:"feedback",role:"status"});
+  s.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;fb(f,b.dataset.v===a?"ok":"mid",(b.dataset.v===a?"Así es. ":"Piénsalo otra vez. ")+exp);});
+  it.append(s,f);$("#sg").appendChild(it);
+});
+
+/* ---------- escenas con filas ---------- */
+$$("[data-hotrows]").forEach(box=>{
+  const d=G.hot[box.dataset.hotrows];
+  d.rows.forEach(([L,label,ans])=>{
+    const r=el("div",{class:"row",id:box.dataset.hotrows+L},`<span class="lt">${L}</span><span>${label}</span>`);
+    const s=el("select",{"data-q":"","data-label":`Imagen ${L} · ${label}`,"data-answer":ans,"aria-label":label});
+    s.innerHTML=opt(d.options);r.appendChild(s);box.appendChild(r);
+  });
+});
+$$(".hot[data-row]").forEach(h=>h.addEventListener("click",()=>{
+  const sc=h.closest(".scene");$$(".hot",sc).forEach(x=>x.classList.toggle("sel",x===h));
+  const r=document.getElementById(h.dataset.row);if(!r)return;
+  r.classList.remove("pulse");void r.offsetWidth;r.classList.add("pulse");
+  r.scrollIntoView({block:"nearest"});$("select",r).focus({preventScroll:true});
+}));
+
+/* ---------- clasificar ---------- */
+$$("[data-classify]").forEach(box=>{
+  const d=G.classify[box.dataset.classify];
+  d.items.forEach(([t,a])=>{
+    const r=el("div",{class:"row"},`<span>${t}</span>`);
+    const s=el("select",{"data-q":"","data-label":t.replace(/<[^>]+>/g,""),"data-answer":a,"aria-label":t.replace(/<[^>]+>/g,"")});
+    s.innerHTML=opt(d.options);r.appendChild(s);box.appendChild(r);
+  });
+});
+
+/* ---------- causal ---------- */
+(function(){
+  const box=$("#causal");
+  box.appendChild(el("div",{class:"row hd"},"<span>Hecho</span><span>Causa</span><span>Consecuencia</span>"));
+  const causes=shuffle(G.causal.map(x=>x[1]).concat(G.causalExtra[0]));
+  const cons=shuffle(G.causal.map(x=>x[2]).concat(G.causalExtra[1]));
+  G.causal.forEach(([h,c,q])=>{
+    const r=el("div",{class:"row"},`<b>${h}</b>`);
+    const s1=el("select",{"data-q":"","data-label":h+" · causa","data-answer":c,"aria-label":"Causa de: "+h});s1.innerHTML=opt(causes);
+    const s2=el("select",{"data-q":"","data-label":h+" · consecuencia","data-answer":q,"aria-label":"Consecuencia de: "+h});s2.innerHTML=opt(cons);
+    r.append(s1,s2);box.appendChild(r);
+  });
+})();
+
+/* ---------- comprobador genérico ---------- */
+$$("[data-check]").forEach(b=>b.addEventListener("click",()=>{
+  const box=$(b.dataset.check),f=b.parentElement.querySelector(".feedback");
+  const sels=$$("select[data-answer]",box);let ok=0,empty=0;
+  sels.forEach(s=>{s.classList.remove("is-ok","is-bad");if(!s.value){empty++;return;}
+    const v=s.value;if(v===s.dataset.answer){ok++;s.classList.add("is-ok");}else s.classList.add("is-bad");});
+  if(empty)fb(f,"mid",`Te faltan ${empty} por responder.`);
+  else if(ok===sels.length)fb(f,"ok","¡Todo correcto!");
+  else fb(f,"bad",`${ok} de ${sels.length} correctas. Revisa las rojas y vuelve a intentarlo.`);
+  results[b.closest("[data-nav]").id]=`Comprobación: ${ok} de ${sels.length}`;
+}));
+
+/* ---------- tarjetas ---------- */
+G.flash.forEach(([t,d,e],i)=>{
+  const w=el("div");
+  const c=el("button",{class:"fc","aria-pressed":"false"},`<span class="term">${t}</span><span class="hint">Toca para voltear</span><span class="def">${d}</span><span class="ej">Ejemplo: ${e}</span>`);
+  c.addEventListener("click",()=>c.setAttribute("aria-pressed",c.getAttribute("aria-pressed")!=="true"));
+  const r=el("div",{class:"seg fc-rate",role:"group","aria-label":"¿La sabías? "+t,"data-q":"","data-get":"seg","data-label":"Tarjeta · "+t,"data-id":"fc"+i});
+  r.innerHTML=segHTML([["1","No"],["2","Más o menos"],["3","La sabía"]]);
+  w.append(c,r);$("#flash").appendChild(w);
+});
+const flashCount=()=>{const n=$$(".fc-rate").filter(r=>$('[aria-pressed="true"][data-v="3"]',r)).length;$("#flashT").textContent=`Sabías ${n} de ${G.flash.length}.`;};
+
+/* ---------- memoria ---------- */
+let memOpen=[],memMoves=0,memPairs=0;
+function buildMem(){
+  const box=$("#mem");box.innerHTML="";memOpen=[];memMoves=0;memPairs=0;
+  const cards=shuffle(G.mem.flatMap(([t,d],i)=>[[t,i,"term"],[d,i,"def"]]));
+  cards.forEach(([txt,id,k])=>{
+    const b=el("button",{class:k,"data-p":id,"aria-label":"Carta boca abajo"},`<span class="f">${txt}</span>`);
+    b.addEventListener("click",()=>{
+      if(b.classList.contains("up")||b.classList.contains("ok")||memOpen.length===2)return;
+      b.classList.add("up");b.setAttribute("aria-label",txt);memOpen.push(b);
+      if(memOpen.length===2){
+        memMoves++;const[a,c]=memOpen;
+        if(a.dataset.p===c.dataset.p){a.classList.replace("up","ok");c.classList.replace("up","ok");memOpen=[];memPairs++;}
+        else setTimeout(()=>{memOpen.forEach(x=>{x.classList.remove("up");x.setAttribute("aria-label","Carta boca abajo");});memOpen=[];},1100);
+        memStat();played(box);
+      }
+    });
+    box.appendChild(b);
+  });
+  memStat();
+}
+function memStat(){const t=memPairs===G.mem.length?`¡Completaste las ${memPairs} parejas en ${memMoves} intentos!`:`Parejas: ${memPairs} de ${G.mem.length} · Intentos: ${memMoves}`;$("#memStats").textContent=t;results["act-4"]=t;}
+$("#memReset").addEventListener("click",buildMem);buildMem();
+
+/* ---------- buscar en la ciudad ---------- */
+(function(){
+  const sc=$("#scene2");const hots=$$(".hot",sc);
+  const order=shuffle(hots.map(h=>h.dataset.c));let k=0,err=0;
+  const list=$("#findL");order.forEach(c=>list.appendChild(el("span",{"data-c":c},c)));
+  const show=()=>{if(k<order.length){$("#findT").textContent=order[k];$("#findS").textContent=`Encontrados: ${k} de ${order.length} · Errores: ${err}`;}
+    else{$("#findT").textContent="¡Lo encontraste todo!";$("#findS").textContent=`Errores: ${err}`;}
+    results["act-9"]=`Encontrados ${k} de ${order.length}, errores ${err}`;};
+  hots.forEach(h=>h.addEventListener("click",()=>{
+    if(k>=order.length||h.classList.contains("done"))return;
+    if(h.dataset.c===order[k]){h.classList.add("done");h.textContent="✓";h.title=h.dataset.c;$(`[data-c="${order[k]}"]`,list).classList.add("ok");k++;}
+    else{err++;h.classList.remove("wrong");void h.offsetWidth;h.classList.add("wrong");}
+    show();played(sc);
+  }));
+  show();
+})();
+
+/* ---------- simulador de población ---------- */
+(function(){
+  const P=G.pob,svg=$("#pobSvg"),box=$("#pobProbs");
+  const calm=el("p",{class:"aviso ok"},P.calm);box.appendChild(calm);
+  const probs=P.probs.map(([t,opts,ans],i)=>{
+    const d=el("div",{class:"prob",hidden:""},`<p>Con ${P.steps[i+1].toLocaleString("es-CO")} habitantes: ${t}</p>`);
+    const s=el("select",{"data-q":"","data-label":"Kora crece · "+t,"data-answer":opts[ans],"aria-label":t});s.innerHTML=opt(opts);
+    const f=el("div",{class:"feedback",role:"status"});
+    s.addEventListener("change",()=>{if(!s.value)return;const ok=s.value===opts[ans];s.classList.toggle("is-ok",ok);s.classList.toggle("is-bad",!ok);fb(f,ok?"ok":"bad",ok?"Buena solución: una norma clara evita el conflicto.":"Esa opción deja el problema sin resolver o crea uno nuevo. Intenta otra.");});
+    d.append(s,f);box.appendChild(d);return d;
+  });
+  function draw(step){
+    const n=P.houses[step];let h=`<rect width="400" height="240" fill="#F5E2B8"/><path d="M0 205 Q200 190 400 208 L400 240 L0 240Z" fill="#4A8BC4"/>`;
+    if(step>=1)h+=`<path d="M200 205 V120 M200 150 H80 M200 150 H320" stroke="#6BA5D6" stroke-width="5" fill="none"/>`;
+    if(step>=3)h+=`<rect x="14" y="30" width="372" height="160" fill="none" stroke="#8C6437" stroke-width="6" stroke-dasharray="14 6"/>`;
+    if(step>=4)h+=`<g fill="#C9A26A" stroke="#8C6437" stroke-width="2"><rect x="170" y="62" width="60" height="18"/><rect x="180" y="46" width="40" height="16"/><rect x="190" y="32" width="20" height="14"/></g>`;
+    if(step>=2)h+=`<g><rect x="300" y="60" width="44" height="34" fill="#E8D39A" stroke="#A8904F" stroke-width="2"/><path d="M296 60 L322 44 L348 60Z" fill="#A8904F"/></g>`;
+    for(let i=0;i<n;i++){const cols=7,x=30+(i%cols)*48+(Math.floor(i/cols)%2)*16,y=176-Math.floor(i/cols)*30;
+      if(step>=2&&x>280&&y<110)continue;if(step>=4&&x>150&&x<240&&y<100)continue;
+      h+=`<g><rect x="${x}" y="${y-18}" width="26" height="18" fill="#C99A62" stroke="#8C6437" stroke-width="1.5"/><rect x="${x+10}" y="${y-10}" width="6" height="10" fill="#5A3A20"/></g>`;}
+    if(step===0)h+=`<path d="M198 178 l6 -12 l6 12z" fill="#F08A24"/>`;
+    svg.innerHTML=h;
+    $("#pobN").textContent=P.steps[step].toLocaleString("es-CO")+" habitantes";
+    calm.hidden=step>0;probs.forEach((p,i)=>p.hidden=i>=step);
+  }
+  const r=$("#pobR");r.addEventListener("input",()=>{draw(+r.value);store.pob=r.value;save();played(r);});
+  draw(+(store.pob||0));r.value=store.pob||0;
+})();
+
+/* ---------- V/F ---------- */
+G.vf.forEach(([t,a,hint],i)=>{
+  const it=el("div",{class:"vf-item"});
+  it.innerHTML=`<div class="vf-row"><span><b>${"abcdef"[i]})</b> ${t}</span><div class="seg vfb" role="group" data-q data-get="seg" data-id="vf${i}" data-label="${esc(t)}">${segHTML([["V","V"],["F","F"]])}</div></div><input type="text" data-q data-label="Corrección: ${esc(t)}" placeholder="Escribe la oración corregida"><div class="feedback" role="status"></div>`;
+  const f=$(".feedback",it);
+  $(".seg",it).addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const v=b.dataset.v;
+    it.classList.toggle("needs",v==="F");
+    if(v===a)fb(f,"ok",a==="F"?`¡Correcto, es falsa! Corrígela según ${hint}.`:"¡Correcto!");else fb(f,"bad",`Revisa ${hint}.`);});
+  $("#vf").appendChild(it);
+});
+
+/* ---------- opción múltiple ---------- */
+$$("[data-mcq]").forEach(box=>{
+  const d=G.mcq[box.dataset.mcq];
+  d.forEach(([stem,opts,ans,exp],i)=>{
+    const m=el("div",{class:"mcq"});m.dataset.ans=ans;m.dataset.exp=exp;
+    m.innerHTML=`<fieldset data-q data-get="radio" data-label="${esc(stem)}"><legend>${i+1}. ${stem}</legend>${opts.map((o,j)=>`<label><input type="radio" name="${box.dataset.mcq}_${i}" value="${j}"><span><b>${"ABCD"[j]}.</b> ${o}</span></label>`).join("")}</fieldset><p class="exp feedback"></p>`;
+    box.appendChild(m);
+  });
+  const a=el("div",{class:"actions"});const b=el("button",{class:"btn"});b.textContent="Comprobar respuestas";const f=el("div",{class:"feedback",role:"status"});a.append(b,f);box.appendChild(a);
+  b.addEventListener("click",()=>{let ok=0;
+    $$(".mcq",box).forEach(m=>{$$("label",m).forEach(l=>l.classList.remove("is-ok","is-bad"));const r=$("input:checked",m),x=$(".exp",m);
+      if(!r){fb(x,"mid","Elige una opción.");return;}
+      if(+r.value===+m.dataset.ans){ok++;r.closest("label").classList.add("is-ok");fb(x,"ok","¡Correcto! "+m.dataset.exp);}
+      else{r.closest("label").classList.add("is-bad");fb(x,"bad","Todavía no. Piensa otra vez.");}});
+    fb(f,ok===d.length?"ok":"mid",`${ok} de ${d.length} correctas.`);results[box.closest("[data-nav]").id]=`Puntaje: ${ok} de ${d.length}`;});
+});
+
+/* ---------- línea del tiempo ---------- */
+(function(){
+  const ol=$("#tl");let cur=[];
+  function render(){ol.innerHTML="";ol.classList.remove("checked");
+    cur.forEach((idx,pos)=>{const[t,d]=G.tl[idx];
+      const li=el("li",{},`<span class="n">${pos+1}</span><span>${t}<span class="dt">${d}</span></span>`);
+      const mv=el("span",{class:"mv"});
+      const up=el("button",{"aria-label":"Subir: "+t},"↑"),dn=el("button",{"aria-label":"Bajar: "+t},"↓");
+      up.disabled=pos===0;dn.disabled=pos===cur.length-1;
+      up.onclick=()=>{[cur[pos-1],cur[pos]]=[cur[pos],cur[pos-1]];render();ol.children[pos-1].querySelector("button").focus();played(ol);};
+      dn.onclick=()=>{[cur[pos+1],cur[pos]]=[cur[pos],cur[pos+1]];render();ol.children[pos+1].querySelectorAll("button")[1].focus();played(ol);};
+      mv.append(up,dn);li.appendChild(mv);ol.appendChild(li);});}
+  const mix=()=>{do{cur=shuffle(G.tl.map((_,i)=>i));}while(cur.every((v,i)=>v===i));render();};
+  $("#tlMix").onclick=mix;mix();
+  $("#tlCheck").onclick=()=>{let ok=0;$$("li",ol).forEach((li,pos)=>{const g=cur[pos]===pos;li.classList.toggle("is-ok",g);li.classList.toggle("is-bad",!g);if(g)ok++;});
+    const f=$("#tlCheck").parentElement.querySelector(".feedback");
+    if(ok===cur.length){ol.classList.add("checked");fb(f,"ok","¡Línea del tiempo correcta! Mira las fechas.");}
+    else fb(f,"bad",`${ok} de ${cur.length} en su lugar. Pista: «a. C.» cuenta hacia atrás; 3200 a. C. es más antiguo que 508 a. C.`);
+    results["act-15"]=`Orden: ${ok} de ${cur.length}`;played(ol);};
+})();
+
+/* ---------- semáforo ---------- */
+G.semaforo.forEach((t,i)=>{
+  const r=el("div",{class:"sem-row"},`<span>${t}</span>`);
+  const s=el("div",{class:"seg",role:"group","aria-label":t,"data-q":"","data-get":"seg","data-label":"Autoevaluación · "+t,"data-id":"sem"+i});
+  s.innerHTML=segHTML([["1","Necesito ayuda"],["2","Casi"],["3","Lo logro"]]);r.appendChild(s);$("#semaforo").appendChild(r);
+});
+$$(".seg[data-get=seg]").forEach(s=>{
+  $$("button",s).forEach(b=>b.addEventListener("click",()=>{$$("button",s).forEach(x=>x.setAttribute("aria-pressed",x===b));store[s.dataset.id]=b.dataset.v;save();flashCount();progress();}));
+  const v=store[s.dataset.id];if(v){const b=$(`button[data-v="${v}"]`,s);if(b)b.setAttribute("aria-pressed","true");}
+});
+
+/* ---------- subrayado ---------- */
+const hlMode={};const names={b:"azul",v:"verde",r:"rojo",o:"naranja"};const CL=["b","v","r","o"];
+$$("[data-tools]").forEach(t=>{const k=t.dataset.tools;hlMode[k]="b";
+  $$(".hl-btn",t).forEach(b=>b.addEventListener("click",()=>{hlMode[k]=b.dataset.mode;$$(".hl-btn",t).forEach(x=>x.setAttribute("aria-pressed",x===b));}));});
+$$("[data-hl]").forEach(body=>{const k=body.dataset.hl;
+  $$(".s",body).forEach((s,i)=>{s.setAttribute("role","button");s.tabIndex=0;
+    const apply=()=>{CL.forEach(c=>s.classList.remove("c-"+c));s.classList.remove("miss");const m=hlMode[k];if(m!=="x")s.classList.add("c-"+m);store["hl_"+k+"_"+i]=m==="x"?"":m;save();progress();};
+    s.addEventListener("click",apply);s.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();apply();}});
+    const v=store["hl_"+k+"_"+i];if(v)s.classList.add("c-"+v);});});
+const colorOf=s=>CL.find(x=>s.classList.contains("c-"+x));
+$$("[data-check-hl]").forEach(b=>b.addEventListener("click",()=>{
+  const body=$(`[data-hl="${b.dataset.checkHl}"]`),f=b.parentElement.querySelector(".feedback");const ss=$$(".s",body);let ok=0,m=0;
+  ss.forEach(s=>{const c=colorOf(s);if(c){m++;if(s.dataset.k.split(" ").includes(c))ok++;}});
+  if(m<ss.length)fb(f,"mid",`Llevas ${m} de ${ss.length} oraciones marcadas.`);
+  else fb(f,ok===ss.length?"ok":"mid",ok===ss.length?"¡Excelente! Identificaste la función de cada oración.":`${ok} de ${ss.length} coinciden. Usa «Ver las que me faltan».`);}));
+$$("[data-show-hl]").forEach(b=>b.addEventListener("click",()=>{
+  const body=$(`[data-hl="${b.dataset.showHl}"]`),f=b.parentElement.querySelector(".feedback");let n=0;
+  $$(".s",body).forEach(s=>{const c=colorOf(s);const bad=!c||!s.dataset.k.split(" ").includes(c);s.classList.toggle("miss",bad);if(bad)n++;});
+  fb(f,n?"mid":"ok",n?`Las ${n} oraciones con borde punteado tienen otra función. Cámbiales el color.`:"No hay oraciones pendientes.");}));
+
+/* ---------- voz ---------- */
+const canSpeak="speechSynthesis" in window;
+$$("[data-speak]").forEach(b=>{if(!canSpeak){b.hidden=true;return;}
+  b.addEventListener("click",()=>{if(speechSynthesis.speaking){speechSynthesis.cancel();$$("[data-speak]").forEach(x=>x.textContent="Escuchar");return;}
+    const u=new SpeechSynthesisUtterance($("#"+b.dataset.speak).innerText.replace(/¶\d/g,""));u.lang="es-CO";u.rate=.92;u.onend=()=>b.textContent="Escuchar";b.textContent="Detener";speechSynthesis.speak(u);});});
+
+/* ---------- persistencia ---------- */
+$$("textarea[data-q],select[data-q],input[data-q]").forEach((f,i)=>{
+  if(f.closest("#pobProbs")||f.closest("#causal"))return; // se reconstruyen o barajan
+  const id="f"+i;
+  if(store[id]!==undefined){if(f.type==="checkbox")f.checked=!!store[id];else f.value=store[id];}
+  f.addEventListener(f.tagName==="SELECT"||f.type==="checkbox"?"change":"input",()=>{store[id]=f.type==="checkbox"?f.checked:f.value;save();progress();if(f.id==="sintesis")count();});
+});
+$$("#pobProbs select,#causal select").forEach(f=>{const id="k_"+f.dataset.label;if(store[id])f.value=store[id];f.addEventListener("change",()=>{store[id]=f.value;save();progress();});});
+$$("fieldset[data-get=radio]").forEach((fs,i)=>{const id="r"+i;
+  if(store[id]!==undefined){const r=$(`input[value="${store[id]}"]`,fs);if(r)r.checked=true;}
+  $$("input",fs).forEach(r=>r.addEventListener("change",()=>{store[id]=r.value;save();progress();}));});
+["nombre","curso","fecha"].forEach(id=>{const f=$("#"+id);if(store[id])f.value=store[id];f.addEventListener("input",()=>{store[id]=f.value;save();});});
+if(!store.fecha)$("#fecha").value=new Date().toLocaleDateString("es-CO");
+const count=()=>{const v=$("#sintesis").value.trim();const w=v?v.split(/\s+/).length:0;
+  const c=(v.toLowerCase().match(/\b(porque|por eso|debido a|ya que|gracias a|como resultado|por lo tanto|así que|entonces|a causa de)\b/g)||[]).length;
+  $("#sintT").textContent=`${w} palabras · ${c} conectores causales`;};
+count();flashCount();
+
+/* ---------- navegación y progreso ---------- */
+const nav=$("#navList");let grp="";const secs=$$("[data-nav]");
+secs.forEach(s=>{const g=s.dataset.group;
+  if(g!==grp){grp=g;const li=el("li",{class:"grp"});li.textContent=g;li.style.setProperty("--gc",G.groupColors[g]||"var(--muted)");nav.appendChild(li);}
+  const n=s.querySelector(".act-n");const li=el("li");const a=el("a",{href:"#"+s.id},`<span class="dot">${n?n.textContent:"·"}</span><span>${s.dataset.nav}</span>`);
+  a.addEventListener("click",()=>{$("#ruta").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");});
+  li.appendChild(a);nav.appendChild(li);s._link=a;});
+function filled(s){
+  return s.dataset.played==="1"
+    ||$$("textarea[data-q],select[data-q],input[type=text][data-q],input[type=checkbox][data-q]",s).some(f=>f.type==="checkbox"?f.checked:f.value.trim())
+    ||$$("input[type=radio]:checked",s).length>0||$$('.seg [aria-pressed="true"]',s).length>0||$$(".s[class*='c-']",s).length>0;}
+function progress(){const acts=secs.filter(s=>s.classList.contains("act")||s.querySelector("[data-hl]"));let d=0;
+  acts.forEach(s=>{const ok=filled(s);s._link.classList.toggle("done",ok);if(ok)d++;});
+  $("#bar").style.width=(100*d/acts.length)+"%";$("#barT").textContent=`${d} de ${acts.length} actividades con trabajo`;}
+progress();
+
+/* ---------- barra ---------- */
+let fsz=17;const setFs=()=>document.documentElement.style.setProperty("--fs",fsz+"px");
+$("#fsUp").onclick=()=>{fsz=Math.min(24,fsz+1);setFs();};$("#fsDown").onclick=()=>{fsz=Math.max(14,fsz-1);setFs();};
+$("#comoda").onclick=e=>{const on=document.body.classList.toggle("comoda");e.currentTarget.setAttribute("aria-pressed",on);};
+$("#menuBtn").onclick=e=>{const o=$("#ruta").classList.toggle("open");e.currentTarget.setAttribute("aria-expanded",o);};
+$("#verTop").onclick=()=>document.querySelector(".final").scrollIntoView();
+
+/* ---------- respuestas ---------- */
+function collect(){
+  const L=[G.title,"Colegio Santo Domingo Bilingüe · Ciencias Sociales","","Nombre: "+($("#nombre").value||"—"),"Curso: "+($("#curso").value||"—"),"Fecha: "+($("#fecha").value||"—"),""];
+  secs.forEach(s=>{const it=[];
+    if(results[s.id])it.push("• "+results[s.id]);
+    $$("[data-q]",s).forEach(f=>{let label=f.dataset.label;if(!label){const q=f.closest(".q");const t=q&&$(".q-t",q);label=t?t.innerText.trim():"Respuesta";}
+      let v="";if(f.tagName==="FIELDSET"){const r=$("input:checked",f);v=r?"ABCD"[+r.value]:"";}
+      else if(f.dataset.get==="po"){v=Array.from(f.children).map(x=>x.value).join("").toUpperCase();}
+      else if(f.dataset.get==="seg"){const b=$('[aria-pressed="true"]',f);v=b?b.textContent:"";}
+      else if(f.type==="checkbox")v=f.checked?"Sí":"No";else v=f.value.trim();
+      it.push("• "+label+"\n  "+(v||"(sin responder)"));});
+    const body=s.querySelector("[data-hl]");
+    if(body)it.push("• Subrayado por colores\n"+$$(".s",body).map((x,i)=>{const c=colorOf(x);return `  ${i+1}. ${c?names[c]:"sin marcar"}`;}).join("\n"));
+    if(it.length){L.push("== "+s.dataset.nav+" ==",...it,"");}});
+  return L.join("\n");}
+const res=$("#resumen");
+$("#verBtn").onclick=()=>{res.value=collect();res.style.display="block";res.focus();res.select();fb($("#dlFb"),"mid","Copia todo el texto y pégalo donde te indique tu docente.");};
+$("#borrarBtn").onclick=()=>{if(!confirm("¿Seguro? Se borrarán todas tus respuestas de este navegador."))return;store={};save();location.reload();};
+(async()=>{try{if(!window.claude||!window.claude.use)return;const dl=await window.claude.use("downloads");if(!dl)return;
+  const b=$("#dlBtn");b.hidden=false;
+  b.onclick=async()=>{const n=($("#nombre").value||"estudiante").trim().replace(/\s+/g,"_");
+    try{await dl.save({filename:`${G.file}_${n}.txt`,data:collect()});fb($("#dlFb"),"ok","Archivo listo. Entrégalo a tu docente.");}
+    catch(e){if(e&&e.code==="declined")fb($("#dlFb"),"mid","No se descargó. Usa «Mostrar mis respuestas».");else if(e&&e.code==="rate_limited")fb($("#dlFb"),"mid","Espera un momento e inténtalo de nuevo.");else{b.hidden=true;fb($("#dlFb"),"mid","Usa «Mostrar mis respuestas».");}}};
+}catch(e){}})();
+})();
+
+</script>
+</body>
+</html>
